@@ -1,0 +1,18 @@
+{
+  "name": "shopex/luban",
+  "type" : "library",
+  "description": "shopex luban service framework.",
+  "keywords": ["shopex","luban"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "wanglei",
+      "email": "wanglei@shopex.cn"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "hprose/hprose": ">=2.0.0",
+    "activecollab/etcd": "^1.0"
+  }
+}
