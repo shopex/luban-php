@@ -9,7 +9,7 @@ class LubanServiceProvider extends ServiceProvider{
 	public function register(){
 		$this->app->singleton('Luban',function(){
 			$l = new Loader();
-			$l->etcd(App::environment('ETCD_ADDR'));
+			$l->etcd(config('app.etcd_addr','http://127.0.0.1:2379'));
             return $l;
         });
 	}
