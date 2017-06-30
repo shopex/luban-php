@@ -64,11 +64,37 @@ class Loader {
 			if($this->srvs[$name]){
 				if($this->srvs[$name]){
 					$addr = 'tcp://'.$this->srvs[$name][array_rand($this->srvs[$name], 1)];
-					$this->conns[$name] = \Hprose\Client::create($addr, false);
+					$this->conns[$name] = Proxy::create($addr, false);
 				}
 			}
 		}
 		return isset($this->conns[$name])?$this->conns[$name]:"";
+	}
+
+}
+
+class LubanException extends \Exception{
+
+}
+
+class Proxy {
+
+	static public function create($uriList, $async = true){
+		$obj = new Proxy($uriList, $async);
+		return $obj;
+	}
+
+	function __construct($uriList, $async = true){
+		$this->core = \Hprose\Client::create($uriList, $async);
+	}
+
+	function __call($name, $arguments){
+		$ret = call_user_func_array([$this->core, $name], $arguments);
+		if(isset($ret->error) && $ret->error){
+			throw new LubanException($ret->error);
+		}elseif(isset($ret->data)){
+			return $ret;
+		}
 	}
 
 }
