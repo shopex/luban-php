@@ -93,7 +93,7 @@ class Proxy {
 		if(isset($ret->error) && $ret->error){
 			throw new LubanException($ret->error);
 		}elseif(isset($ret->data)){
-			return $ret;
+			return $ret->data;
 		}
 	}
 
