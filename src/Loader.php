@@ -68,12 +68,56 @@ class Loader {
 				}
 			}
 		}
-		return isset($this->conns[$name])?$this->conns[$name]:"";
+		if(isset($this->conns[$name])){
+			return $this->conns[$name];
+		}else{
+			throw new BackendException('no available servers for service "'.$name.'"');
+		}
 	}
 
 }
 
-class LubanException extends \Exception{
+class Exception extends \Exception{
+
+}
+
+class BackendException extends Exception{
+	
+}
+
+class Result {
+
+	private $data;
+	private $error_code;
+	private $error_msg;
+	private $is_succ;
+
+	function __construct($var){
+		$this->data = $var->data;
+		$this->error_code = $var->error_code;
+		$this->error_msg = $var->error_msg;
+		$this->is_succ = $var->status == 'succ';
+	}
+
+	function result(){
+		if(!$this->is_succ){
+			throw Exception($this->error_msg);
+			return;
+		}
+		return $this->data;
+	}
+
+	function error(){
+		return $this->error;
+	}
+
+	function error_code(){
+		return $this->error_code;
+	}
+
+	function is_succ(){
+		return $this->is_succ;
+	}
 
 }
 
@@ -89,12 +133,9 @@ class Proxy {
 	}
 
 	function __call($name, $arguments){
-		$ret = call_user_func_array([$this->core, $name], $arguments);
-		if(isset($ret->error) && $ret->error){
-			throw new LubanException($ret->error);
-		}elseif(isset($ret->data)){
-			return $ret->data;
-		}
+		$rst = call_user_func_array([$this->core, $name], $arguments);
+		$rst = new Result($rst);
+		return $rst->result();
 	}
 
 }
