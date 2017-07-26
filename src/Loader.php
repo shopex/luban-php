@@ -9,8 +9,8 @@ class Loader {
 	private $srvs = array();
 	private $etcd_client;
 
-	function etcd($etcd_url) {
-		$this->etcd_client = new Etcd\Client($etcd_url);
+	function __construct($etcd_urls) {
+		$this->etcd_client = new Etcd\Client($etcd_urls);
 		$n = $this->etcd_client->dirInfo('/luban/nodes');
 		foreach($n['node']['nodes'] as $srv){
 			if($srv['dir']){
@@ -27,18 +27,18 @@ class Loader {
 		}
 	}
 
-	function bus(){
+	public function bus(){
 		return $this->etcd_client;
 	}
 
 
-	function services(){
+	public function services(){
 		$srvs = array_keys($this->srvs);
 		sort($srvs);
 		return $srvs;
 	}
 
-	function nodes(){
+	public function nodes(){
 		$nodes = [];
 		$n = $this->etcd_client->dirInfo('/luban/nodes');
 		foreach($n['node']['nodes'] as $srv){
@@ -59,7 +59,15 @@ class Loader {
 		return $nodes;
 	}
 
-	function s($name){
+	public function has($name){
+		return array_key_exists($name, $this->srvs);
+	}
+
+	public function available($name){
+		return $this->has($name) && count($this->srvs[$name]) > 0;
+	}
+
+	public function s($name){
 		if(!array_key_exists($name, $this->conns)){
 			if($this->srvs[$name]){
 				if($this->srvs[$name]){
@@ -125,7 +133,13 @@ class Proxy {
 
 	static public function create($uriList, $async = true){
 		$obj = new Proxy($uriList, $async);
+		$obj->setTimeout(10000);
 		return $obj;
+	}
+
+	function setTimeout($time){
+		$this->core->setTimeout($time);
+		return $this;
 	}
 
 	function __construct($uriList, $async = true){
