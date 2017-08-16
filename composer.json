@@ -1,8 +1,8 @@
 {
-  "name": "shopex/adminui",
+  "name": "shopex/luban",
   "type" : "library",
-  "description": "shopex luban desktop adminui.",
-  "keywords": ["shopex","luban", "adminui"],
+  "description": "shopex luban service framework.",
+  "keywords": ["shopex","luban"],
   "license": "MIT",
   "authors": [
     {
@@ -12,10 +12,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Shopex\\AdminUi\\": "src"
+      "Shopex\\Luban\\": "src"
     }
   },  
   "require": {
-    "php": ">=5.5.0"
+    "php": ">=5.5.0",
+    "hprose/hprose": ">=2.0.0",
+    "activecollab/etcd": "^1.0"
   }
 }
