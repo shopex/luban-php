@@ -1,9 +1,9 @@
 <?php
-namespace Shopex\Luban;
+namespace Shopex\Luban\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Luban extends Facade{
+class LubanFacade extends Facade{
 
     protected static function getFacadeAccessor() { 
     	return 'Luban';
