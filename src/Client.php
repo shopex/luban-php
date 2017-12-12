@@ -3,30 +3,39 @@ namespace Shopex\Luban;
 
 use ActiveCollab\Etcd;
 use Shopex\Luban\Exceptions\BackendException;
-
+use Shopex\Luban\Config\EtcdConfig;
+use Shopex\Luban\Config\PhpConfig;
 class Client {
 
 	public $conns = array();
 	private $srvs = array();
 	private $etcd_client;
 	private $_config;
+	private $configClass;
 
 	function __construct($etcd_urls, $etcd_config_dir) {
-		$this->etcd_config_dir = $etcd_config_dir;
-		$this->etcd_client = new Etcd\Client($etcd_urls);
-		$n = $this->etcd_client->dirInfo('/luban/nodes');
-		foreach($n['node']['nodes'] as $srv){
-			if($srv['dir']){
-				$srvname = basename($srv['key']);
-				$l = $this->etcd_client->dirInfo($srv['key']);
-				$nodes = [];
-				if(isset($l['node']['nodes'])){
-					foreach($l['node']['nodes'] as $node){
-						$nodes[] = basename($node['key']);
+		if (strpos($etcd_urls, "http") !== false) {	
+			$this->configClass = EtcdConfig::class;
+			$this->etcd_config_dir = $etcd_config_dir;
+			$this->etcd_client = new Etcd\Client($etcd_urls);
+			$n = $this->etcd_client->dirInfo('/luban/nodes');
+			foreach($n['node']['nodes'] as $srv){
+				if($srv['dir']){
+					$srvname = basename($srv['key']);
+					$l = $this->etcd_client->dirInfo($srv['key']);
+					$nodes = [];
+					if(isset($l['node']['nodes'])){
+						foreach($l['node']['nodes'] as $node){
+							$nodes[] = basename($node['key']);
+						}
 					}
+					$this->srvs[$srvname] = $nodes;
 				}
-				$this->srvs[$srvname] = $nodes;
 			}
+		}else{
+			$this->configClass     = PhpConfig::class;
+			$this->etcd_config_dir = $etcd_config_dir;
+			$this->etcd_client     = $etcd_urls;
 		}
 	}
 
@@ -88,7 +97,8 @@ class Client {
 
 	public function config(){
 		if(!$this->_config){
-			$this->_config = new Config($this->etcd_client, $this->etcd_config_dir);
+			$config = $this->configClass;
+			$this->_config = new $config($this->etcd_client, $this->etcd_config_dir);
 		}
 		return $this->_config;
 	}

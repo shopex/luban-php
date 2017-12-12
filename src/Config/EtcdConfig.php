@@ -1,8 +1,8 @@
 <?php
-namespace Shopex\Luban;
+namespace Shopex\Luban\Config;
 use ActiveCollab\Etcd\Exception\KeyNotFoundException;
 
-class Config {
+class EtcdConfig implements Config {
 
 	private $etcd_client;
 	private $path;
