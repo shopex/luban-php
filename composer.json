@@ -12,8 +12,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "Shopex\\Luban": "src",
-      "Shopex\\Luban\\Sdf": "sdf"
+      "Shopex\\Luban\\": "src",
+      "Shopex\\Luban\\Sdf\\": "sdf"
     }
   }, 
   "classmap": [
