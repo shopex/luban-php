@@ -14,11 +14,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class Address extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string Name = 2;</code>
+     * Generated from protobuf field <code>string Name = 1;</code>
      */
     private $Name = '';
     /**
-     * Generated from protobuf field <code>string Phone = 4;</code>
+     * Generated from protobuf field <code>string Phone = 2;</code>
      */
     private $Phone = '';
     /**
@@ -26,11 +26,11 @@ class Address extends \Google\Protobuf\Internal\Message
      */
     private $Location = null;
     /**
-     * Generated from protobuf field <code>string Address1 = 5;</code>
+     * Generated from protobuf field <code>string Address1 = 4;</code>
      */
     private $Address1 = '';
     /**
-     * Generated from protobuf field <code>string Address2 = 6;</code>
+     * Generated from protobuf field <code>string Address2 = 5;</code>
      */
     private $Address2 = '';
 
@@ -40,7 +40,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Name = 2;</code>
+     * Generated from protobuf field <code>string Name = 1;</code>
      * @return string
      */
     public function getName()
@@ -49,7 +49,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Name = 2;</code>
+     * Generated from protobuf field <code>string Name = 1;</code>
      * @param string $var
      * @return $this
      */
@@ -62,7 +62,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Phone = 4;</code>
+     * Generated from protobuf field <code>string Phone = 2;</code>
      * @return string
      */
     public function getPhone()
@@ -71,7 +71,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Phone = 4;</code>
+     * Generated from protobuf field <code>string Phone = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -106,7 +106,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address1 = 5;</code>
+     * Generated from protobuf field <code>string Address1 = 4;</code>
      * @return string
      */
     public function getAddress1()
@@ -115,7 +115,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address1 = 5;</code>
+     * Generated from protobuf field <code>string Address1 = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -128,7 +128,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address2 = 6;</code>
+     * Generated from protobuf field <code>string Address2 = 5;</code>
      * @return string
      */
     public function getAddress2()
@@ -137,7 +137,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address2 = 6;</code>
+     * Generated from protobuf field <code>string Address2 = 5;</code>
      * @param string $var
      * @return $this
      */
