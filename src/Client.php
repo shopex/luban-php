@@ -1,7 +1,7 @@
 <?php
 namespace Shopex\Luban;
 
-use Shopex\Luban\Interface\ServiceReslover;
+use Shopex\Luban\Interfaces\ServiceReslover;
 
 class Client{
 
@@ -19,7 +19,12 @@ class Client{
 				self::$reslover = new EnvReslover;
 	    	}
 
-	    	$host = (ServiceReslover)self::$reslover->reslove($name);
+	    	if(!(self::$reslover instanceof ServiceReslover)){
+	    		throw new \Exception(get_class(self::$reslover).
+	    			' is not instance of '.
+	    			ServiceReslover::class);
+	    	}
+	    	$host = self::$reslover->reslove($name);
 
 	    	$class_name = 'Shopex\\Luban\\Sdf\\'.str_replace('/','\\',$name).'Client';
 	    	$obj = new $class_name($host, $opts, $channel);
