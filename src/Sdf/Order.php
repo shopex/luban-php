@@ -58,7 +58,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 发货时间	
      *
-     * Generated from protobuf field <code>int32 ConsignTime = 10;</code>
+     * Generated from protobuf field <code>int64 ConsignTime = 10;</code>
      */
     private $ConsignTime = 0;
     /**
@@ -256,8 +256,8 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 发货时间	
      *
-     * Generated from protobuf field <code>int32 ConsignTime = 10;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 ConsignTime = 10;</code>
+     * @return int|string
      */
     public function getConsignTime()
     {
@@ -267,13 +267,13 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 发货时间	
      *
-     * Generated from protobuf field <code>int32 ConsignTime = 10;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 ConsignTime = 10;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setConsignTime($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->ConsignTime = $var;
 
         return $this;

@@ -84,15 +84,15 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $BuyerMessage = '';
     /**
-     * Generated from protobuf field <code>int32 CreateTime = 18;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 18;</code>
      */
     private $CreateTime = 0;
     /**
-     * Generated from protobuf field <code>int32 PayTime = 19;</code>
+     * Generated from protobuf field <code>int64 PayTime = 19;</code>
      */
     private $PayTime = 0;
     /**
-     * Generated from protobuf field <code>int32 EndTime = 20;</code>
+     * Generated from protobuf field <code>int64 EndTime = 20;</code>
      */
     private $EndTime = 0;
     /**
@@ -484,8 +484,8 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 CreateTime = 18;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 CreateTime = 18;</code>
+     * @return int|string
      */
     public function getCreateTime()
     {
@@ -493,21 +493,21 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 CreateTime = 18;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 CreateTime = 18;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setCreateTime($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->CreateTime = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int32 PayTime = 19;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 PayTime = 19;</code>
+     * @return int|string
      */
     public function getPayTime()
     {
@@ -515,21 +515,21 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 PayTime = 19;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 PayTime = 19;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setPayTime($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->PayTime = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>int32 EndTime = 20;</code>
-     * @return int
+     * Generated from protobuf field <code>int64 EndTime = 20;</code>
+     * @return int|string
      */
     public function getEndTime()
     {
@@ -537,13 +537,13 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 EndTime = 20;</code>
-     * @param int $var
+     * Generated from protobuf field <code>int64 EndTime = 20;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setEndTime($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkInt64($var);
         $this->EndTime = $var;
 
         return $this;
