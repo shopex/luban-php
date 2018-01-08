@@ -16,21 +16,21 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *交易单号
      *
-     * Generated from protobuf field <code>string OrderId = 1;</code>
+     * Generated from protobuf field <code>string TradeId = 1;</code>
      */
-    private $OrderId = '';
+    private $TradeId = '';
     /**
      * 商品id
      *
-     * Generated from protobuf field <code>string ProductId = 2;</code>
+     * Generated from protobuf field <code>string SkuId = 2;</code>
      */
-    private $ProductId = '';
+    private $SkuId = '';
     /**
      * 商品名称
      *
-     * Generated from protobuf field <code>string Name = 3;</code>
+     * Generated from protobuf field <code>string SkuName = 3;</code>
      */
-    private $Name = '';
+    private $SkuName = '';
     /**
      * 数量
      *
@@ -74,25 +74,25 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *交易单号
      *
-     * Generated from protobuf field <code>string OrderId = 1;</code>
+     * Generated from protobuf field <code>string TradeId = 1;</code>
      * @return string
      */
-    public function getOrderId()
+    public function getTradeId()
     {
-        return $this->OrderId;
+        return $this->TradeId;
     }
 
     /**
      *交易单号
      *
-     * Generated from protobuf field <code>string OrderId = 1;</code>
+     * Generated from protobuf field <code>string TradeId = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setOrderId($var)
+    public function setTradeId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->OrderId = $var;
+        $this->TradeId = $var;
 
         return $this;
     }
@@ -100,25 +100,25 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 商品id
      *
-     * Generated from protobuf field <code>string ProductId = 2;</code>
+     * Generated from protobuf field <code>string SkuId = 2;</code>
      * @return string
      */
-    public function getProductId()
+    public function getSkuId()
     {
-        return $this->ProductId;
+        return $this->SkuId;
     }
 
     /**
      * 商品id
      *
-     * Generated from protobuf field <code>string ProductId = 2;</code>
+     * Generated from protobuf field <code>string SkuId = 2;</code>
      * @param string $var
      * @return $this
      */
-    public function setProductId($var)
+    public function setSkuId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->ProductId = $var;
+        $this->SkuId = $var;
 
         return $this;
     }
@@ -126,25 +126,25 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 商品名称
      *
-     * Generated from protobuf field <code>string Name = 3;</code>
+     * Generated from protobuf field <code>string SkuName = 3;</code>
      * @return string
      */
-    public function getName()
+    public function getSkuName()
     {
-        return $this->Name;
+        return $this->SkuName;
     }
 
     /**
      * 商品名称
      *
-     * Generated from protobuf field <code>string Name = 3;</code>
+     * Generated from protobuf field <code>string SkuName = 3;</code>
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setSkuName($var)
     {
         GPBUtil::checkString($var, True);
-        $this->Name = $var;
+        $this->SkuName = $var;
 
         return $this;
     }
