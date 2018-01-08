@@ -40,9 +40,9 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 数量
      *
-     * Generated from protobuf field <code>string Quantity = 5;</code>
+     * Generated from protobuf field <code>int64 Quantity = 5;</code>
      */
-    private $Quantity = '';
+    private $Quantity = 0;
     /**
      * 商品类别ID
      *
@@ -184,8 +184,8 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 数量
      *
-     * Generated from protobuf field <code>string Quantity = 5;</code>
-     * @return string
+     * Generated from protobuf field <code>int64 Quantity = 5;</code>
+     * @return int|string
      */
     public function getQuantity()
     {
@@ -195,13 +195,13 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 数量
      *
-     * Generated from protobuf field <code>string Quantity = 5;</code>
-     * @param string $var
+     * Generated from protobuf field <code>int64 Quantity = 5;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setQuantity($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt64($var);
         $this->Quantity = $var;
 
         return $this;
