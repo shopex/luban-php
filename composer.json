@@ -22,6 +22,7 @@
   "require": {
     "php": ">=5.5.0",
     "grpc/grpc": "v1.7.0",
+    "google/protobuf": "^v3.3.0",
     "activecollab/etcd": "^1.0"
   }
 }
