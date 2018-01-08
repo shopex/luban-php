@@ -3,8 +3,7 @@ namespace Shopex\Luban;
 
 use Shopex\Luban\Interfaces\ServiceReslover;
 
-// class EnvReslover implements ServiceReslover{
-class EnvReslover{
+class EnvReslover implements ServiceReslover{
 
 	public function reslove($service) {
 		$str = getenv('SERVICE_'.$service);
