@@ -14,11 +14,11 @@
     "psr-4": {
       "Shopex\\Luban\\": "src",
       "Shopex\\Luban\\Sdf\\": "sdf"
-    }
+    },
+    "classmap": [
+      "GPBMetadata/"
+    ]
   }, 
-  "classmap": [
-        "GPBMetadata/"
-  ],
   "require": {
     "php": ">=5.5.0",
     "grpc/grpc": "v1.6.0",
