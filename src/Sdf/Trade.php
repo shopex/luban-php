@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Trade extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string Id = 1;</code>
+     * Generated from protobuf field <code>string TradeBn = 1;</code>
      */
-    private $Id = '';
+    private $TradeBn = '';
     /**
      * Generated from protobuf field <code>string BuyerId = 2;</code>
      */
@@ -106,23 +106,23 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Id = 1;</code>
+     * Generated from protobuf field <code>string TradeBn = 1;</code>
      * @return string
      */
-    public function getId()
+    public function getTradeBn()
     {
-        return $this->Id;
+        return $this->TradeBn;
     }
 
     /**
-     * Generated from protobuf field <code>string Id = 1;</code>
+     * Generated from protobuf field <code>string TradeBn = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setId($var)
+    public function setTradeBn($var)
     {
         GPBUtil::checkString($var, True);
-        $this->Id = $var;
+        $this->TradeBn = $var;
 
         return $this;
     }
