@@ -60,10 +60,6 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $BuyerAddress = null;
     /**
-     * Generated from protobuf field <code>.luban.Contact BuyerContact = 12;</code>
-     */
-    private $BuyerContact = null;
-    /**
      * Generated from protobuf field <code>string DiscountToken = 13;</code>
      */
     private $DiscountToken = '';
@@ -347,28 +343,6 @@ class Trade extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Shopex\Luban\Sdf\Address::class);
         $this->BuyerAddress = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.luban.Contact BuyerContact = 12;</code>
-     * @return \Shopex\Luban\Sdf\Contact
-     */
-    public function getBuyerContact()
-    {
-        return $this->BuyerContact;
-    }
-
-    /**
-     * Generated from protobuf field <code>.luban.Contact BuyerContact = 12;</code>
-     * @param \Shopex\Luban\Sdf\Contact $var
-     * @return $this
-     */
-    public function setBuyerContact($var)
-    {
-        GPBUtil::checkMessage($var, \Shopex\Luban\Sdf\Contact::class);
-        $this->BuyerContact = $var;
 
         return $this;
     }

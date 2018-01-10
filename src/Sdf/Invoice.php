@@ -24,45 +24,45 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *发票抬头
      *
-     * Generated from protobuf field <code>string content = 4;</code>
+     * Generated from protobuf field <code>string Content = 4;</code>
      */
-    private $content = '';
+    private $Content = '';
     /**
      *公司名称
      *
-     * Generated from protobuf field <code>string company_name = 5;</code>
+     * Generated from protobuf field <code>string CompanyName = 5;</code>
      */
-    private $company_name = '';
+    private $CompanyName = '';
     /**
      *公司地址
      *
-     * Generated from protobuf field <code>string company_address = 6;</code>
+     * Generated from protobuf field <code>string CompanyAddress = 6;</code>
      */
-    private $company_address = '';
+    private $CompanyAddress = '';
     /**
      *纳税人识别号
      *
-     * Generated from protobuf field <code>string registration_number = 7;</code>
+     * Generated from protobuf field <code>string RegistrationNumber = 7;</code>
      */
-    private $registration_number = '';
+    private $RegistrationNumber = '';
     /**
      *开户银行
      *
-     * Generated from protobuf field <code>string bankname = 8;</code>
+     * Generated from protobuf field <code>string Bankname = 8;</code>
      */
-    private $bankname = '';
+    private $Bankname = '';
     /**
      *开户银行帐号
      *
-     * Generated from protobuf field <code>string bankaccount = 9;</code>
+     * Generated from protobuf field <code>string Bankaccount = 9;</code>
      */
-    private $bankaccount = '';
+    private $Bankaccount = '';
     /**
      *公司电话
      *
-     * Generated from protobuf field <code>string company_phone = 10;</code>
+     * Generated from protobuf field <code>string CompanyPhone = 10;</code>
      */
-    private $company_phone = '';
+    private $CompanyPhone = '';
 
     public function __construct() {
         \GPBMetadata\Shopex::initOnce();
@@ -116,25 +116,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *发票抬头
      *
-     * Generated from protobuf field <code>string content = 4;</code>
+     * Generated from protobuf field <code>string Content = 4;</code>
      * @return string
      */
     public function getContent()
     {
-        return $this->content;
+        return $this->Content;
     }
 
     /**
      *发票抬头
      *
-     * Generated from protobuf field <code>string content = 4;</code>
+     * Generated from protobuf field <code>string Content = 4;</code>
      * @param string $var
      * @return $this
      */
     public function setContent($var)
     {
         GPBUtil::checkString($var, True);
-        $this->content = $var;
+        $this->Content = $var;
 
         return $this;
     }
@@ -142,25 +142,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *公司名称
      *
-     * Generated from protobuf field <code>string company_name = 5;</code>
+     * Generated from protobuf field <code>string CompanyName = 5;</code>
      * @return string
      */
     public function getCompanyName()
     {
-        return $this->company_name;
+        return $this->CompanyName;
     }
 
     /**
      *公司名称
      *
-     * Generated from protobuf field <code>string company_name = 5;</code>
+     * Generated from protobuf field <code>string CompanyName = 5;</code>
      * @param string $var
      * @return $this
      */
     public function setCompanyName($var)
     {
         GPBUtil::checkString($var, True);
-        $this->company_name = $var;
+        $this->CompanyName = $var;
 
         return $this;
     }
@@ -168,25 +168,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *公司地址
      *
-     * Generated from protobuf field <code>string company_address = 6;</code>
+     * Generated from protobuf field <code>string CompanyAddress = 6;</code>
      * @return string
      */
     public function getCompanyAddress()
     {
-        return $this->company_address;
+        return $this->CompanyAddress;
     }
 
     /**
      *公司地址
      *
-     * Generated from protobuf field <code>string company_address = 6;</code>
+     * Generated from protobuf field <code>string CompanyAddress = 6;</code>
      * @param string $var
      * @return $this
      */
     public function setCompanyAddress($var)
     {
         GPBUtil::checkString($var, True);
-        $this->company_address = $var;
+        $this->CompanyAddress = $var;
 
         return $this;
     }
@@ -194,25 +194,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *纳税人识别号
      *
-     * Generated from protobuf field <code>string registration_number = 7;</code>
+     * Generated from protobuf field <code>string RegistrationNumber = 7;</code>
      * @return string
      */
     public function getRegistrationNumber()
     {
-        return $this->registration_number;
+        return $this->RegistrationNumber;
     }
 
     /**
      *纳税人识别号
      *
-     * Generated from protobuf field <code>string registration_number = 7;</code>
+     * Generated from protobuf field <code>string RegistrationNumber = 7;</code>
      * @param string $var
      * @return $this
      */
     public function setRegistrationNumber($var)
     {
         GPBUtil::checkString($var, True);
-        $this->registration_number = $var;
+        $this->RegistrationNumber = $var;
 
         return $this;
     }
@@ -220,25 +220,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *开户银行
      *
-     * Generated from protobuf field <code>string bankname = 8;</code>
+     * Generated from protobuf field <code>string Bankname = 8;</code>
      * @return string
      */
     public function getBankname()
     {
-        return $this->bankname;
+        return $this->Bankname;
     }
 
     /**
      *开户银行
      *
-     * Generated from protobuf field <code>string bankname = 8;</code>
+     * Generated from protobuf field <code>string Bankname = 8;</code>
      * @param string $var
      * @return $this
      */
     public function setBankname($var)
     {
         GPBUtil::checkString($var, True);
-        $this->bankname = $var;
+        $this->Bankname = $var;
 
         return $this;
     }
@@ -246,25 +246,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *开户银行帐号
      *
-     * Generated from protobuf field <code>string bankaccount = 9;</code>
+     * Generated from protobuf field <code>string Bankaccount = 9;</code>
      * @return string
      */
     public function getBankaccount()
     {
-        return $this->bankaccount;
+        return $this->Bankaccount;
     }
 
     /**
      *开户银行帐号
      *
-     * Generated from protobuf field <code>string bankaccount = 9;</code>
+     * Generated from protobuf field <code>string Bankaccount = 9;</code>
      * @param string $var
      * @return $this
      */
     public function setBankaccount($var)
     {
         GPBUtil::checkString($var, True);
-        $this->bankaccount = $var;
+        $this->Bankaccount = $var;
 
         return $this;
     }
@@ -272,25 +272,25 @@ class Invoice extends \Google\Protobuf\Internal\Message
     /**
      *公司电话
      *
-     * Generated from protobuf field <code>string company_phone = 10;</code>
+     * Generated from protobuf field <code>string CompanyPhone = 10;</code>
      * @return string
      */
     public function getCompanyPhone()
     {
-        return $this->company_phone;
+        return $this->CompanyPhone;
     }
 
     /**
      *公司电话
      *
-     * Generated from protobuf field <code>string company_phone = 10;</code>
+     * Generated from protobuf field <code>string CompanyPhone = 10;</code>
      * @param string $var
      * @return $this
      */
     public function setCompanyPhone($var)
     {
         GPBUtil::checkString($var, True);
-        $this->company_phone = $var;
+        $this->CompanyPhone = $var;
 
         return $this;
     }
