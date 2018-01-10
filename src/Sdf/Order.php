@@ -16,9 +16,9 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *交易单号
      *
-     * Generated from protobuf field <code>string TradeId = 1;</code>
+     * Generated from protobuf field <code>string TradeBn = 1;</code>
      */
-    private $TradeId = '';
+    private $TradeBn = '';
     /**
      * 库存key
      *
@@ -80,25 +80,25 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *交易单号
      *
-     * Generated from protobuf field <code>string TradeId = 1;</code>
+     * Generated from protobuf field <code>string TradeBn = 1;</code>
      * @return string
      */
-    public function getTradeId()
+    public function getTradeBn()
     {
-        return $this->TradeId;
+        return $this->TradeBn;
     }
 
     /**
      *交易单号
      *
-     * Generated from protobuf field <code>string TradeId = 1;</code>
+     * Generated from protobuf field <code>string TradeBn = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setTradeId($var)
+    public function setTradeBn($var)
     {
         GPBUtil::checkString($var, True);
-        $this->TradeId = $var;
+        $this->TradeBn = $var;
 
         return $this;
     }
