@@ -58,9 +58,9 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 买家信息
      *
-     * Generated from protobuf field <code>repeated string Customization = 10;</code>
+     * Generated from protobuf field <code>string Customization = 10;</code>
      */
-    private $Customization;
+    private $Customization = '';
     /**
      * 发货时间	
      *
@@ -262,8 +262,8 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 买家信息
      *
-     * Generated from protobuf field <code>repeated string Customization = 10;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * Generated from protobuf field <code>string Customization = 10;</code>
+     * @return string
      */
     public function getCustomization()
     {
@@ -273,14 +273,14 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 买家信息
      *
-     * Generated from protobuf field <code>repeated string Customization = 10;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>string Customization = 10;</code>
+     * @param string $var
      * @return $this
      */
     public function setCustomization($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->Customization = $arr;
+        GPBUtil::checkString($var, True);
+        $this->Customization = $var;
 
         return $this;
     }
