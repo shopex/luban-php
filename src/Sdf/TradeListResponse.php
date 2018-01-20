@@ -14,9 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class TradeListResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.luban.Trade Trade = 1;</code>
+     * Generated from protobuf field <code>repeated .luban.Trade Trade = 1;</code>
      */
-    private $Trade = null;
+    private $Trade;
+    /**
+     * Generated from protobuf field <code>int64 Count = 2;</code>
+     */
+    private $Count = 0;
 
     public function __construct() {
         \GPBMetadata\Dealer::initOnce();
@@ -24,8 +28,8 @@ class TradeListResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.luban.Trade Trade = 1;</code>
-     * @return \Shopex\Luban\Sdf\Trade
+     * Generated from protobuf field <code>repeated .luban.Trade Trade = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTrade()
     {
@@ -33,14 +37,36 @@ class TradeListResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.luban.Trade Trade = 1;</code>
-     * @param \Shopex\Luban\Sdf\Trade $var
+     * Generated from protobuf field <code>repeated .luban.Trade Trade = 1;</code>
+     * @param \Shopex\Luban\Sdf\Trade[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setTrade($var)
     {
-        GPBUtil::checkMessage($var, \Shopex\Luban\Sdf\Trade::class);
-        $this->Trade = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Trade::class);
+        $this->Trade = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 Count = 2;</code>
+     * @return int|string
+     */
+    public function getCount()
+    {
+        return $this->Count;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 Count = 2;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCount($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->Count = $var;
 
         return $this;
     }

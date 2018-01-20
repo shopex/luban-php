@@ -43,11 +43,11 @@ class DealerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Shopex\Luban\Sdf\TradeListRequest $argument input argument
+     * @param \Shopex\Luban\Sdf\SearchRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function TradeList(\Shopex\Luban\Sdf\TradeListRequest $argument,
+    public function TradeList(\Shopex\Luban\Sdf\SearchRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/luban.Dealer/TradeList',
         $argument,

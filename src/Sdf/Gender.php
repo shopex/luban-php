@@ -10,12 +10,12 @@ namespace Shopex\Luban\Sdf;
 class Gender
 {
     /**
-     * Generated from protobuf enum <code>MALE = 0;</code>
+     * Generated from protobuf enum <code>FEMALE = 0;</code>
      */
-    const MALE = 0;
+    const FEMALE = 0;
     /**
-     * Generated from protobuf enum <code>FEMALE = 1;</code>
+     * Generated from protobuf enum <code>MALE = 1;</code>
      */
-    const FEMALE = 1;
+    const MALE = 1;
 }
 
