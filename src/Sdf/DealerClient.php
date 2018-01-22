@@ -55,4 +55,17 @@ class DealerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Shopex\Luban\Sdf\TradePayRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradePay(\Shopex\Luban\Sdf\TradePayRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradePay',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradePayResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
