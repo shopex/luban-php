@@ -68,9 +68,9 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     private $ConsignTime = 0;
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta meta = 12;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 12;</code>
      */
-    private $meta;
+    private $Meta;
 
     public function __construct() {
         \GPBMetadata\Shopex::initOnce();
@@ -312,23 +312,23 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta meta = 12;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 12;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMeta()
     {
-        return $this->meta;
+        return $this->Meta;
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta meta = 12;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 12;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setMeta($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Meta::class);
-        $this->meta = $arr;
+        $this->Meta = $arr;
 
         return $this;
     }
