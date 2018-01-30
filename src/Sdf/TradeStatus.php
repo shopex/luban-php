@@ -10,19 +10,19 @@ namespace Shopex\Luban\Sdf;
 class TradeStatus
 {
     /**
-     * 进行中
+     * 交易处理中
      *
-     * Generated from protobuf enum <code>TRADE_OPEN = 0;</code>
+     * Generated from protobuf enum <code>TRADE_ACTIVE = 0;</code>
      */
-    const TRADE_OPEN = 0;
+    const TRADE_ACTIVE = 0;
     /**
-     * 已完成
+     * 交易成功
      *
      * Generated from protobuf enum <code>TRADE_FINISHED = 1;</code>
      */
     const TRADE_FINISHED = 1;
     /**
-     * 已作废
+     * 交易作废即交易关闭
      *
      * Generated from protobuf enum <code>TRADE_CLOSED = 2;</code>
      */
