@@ -18,9 +18,9 @@ class TradePayRequest extends \Google\Protobuf\Internal\Message
      */
     private $TradeBn = '';
     /**
-     * Generated from protobuf field <code>.luban.OrderStatus Status = 2;</code>
+     * Generated from protobuf field <code>.luban.PaymentStatus PaymentStatus = 2;</code>
      */
-    private $Status = 0;
+    private $PaymentStatus = 0;
     /**
      * Generated from protobuf field <code>double Amount = 3;</code>
      */
@@ -54,23 +54,23 @@ class TradePayRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.luban.OrderStatus Status = 2;</code>
+     * Generated from protobuf field <code>.luban.PaymentStatus PaymentStatus = 2;</code>
      * @return int
      */
-    public function getStatus()
+    public function getPaymentStatus()
     {
-        return $this->Status;
+        return $this->PaymentStatus;
     }
 
     /**
-     * Generated from protobuf field <code>.luban.OrderStatus Status = 2;</code>
+     * Generated from protobuf field <code>.luban.PaymentStatus PaymentStatus = 2;</code>
      * @param int $var
      * @return $this
      */
-    public function setStatus($var)
+    public function setPaymentStatus($var)
     {
-        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\OrderStatus::class);
-        $this->Status = $var;
+        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\PaymentStatus::class);
+        $this->PaymentStatus = $var;
 
         return $this;
     }
