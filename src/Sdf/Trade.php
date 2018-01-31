@@ -128,27 +128,33 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $Invoice = null;
     /**
-     *买家信息
+     *买家备注
      *
-     * Generated from protobuf field <code>string BuyerMessage = 20;</code>
+     * Generated from protobuf field <code>string BuyerMemo = 20;</code>
      */
-    private $BuyerMessage = '';
+    private $BuyerMemo = '';
+    /**
+     *交易备注
+     *
+     * Generated from protobuf field <code>string TradeMemo = 21;</code>
+     */
+    private $TradeMemo = '';
     /**
      *创建时间 Status = TRADE_ACTIVE
      *
-     * Generated from protobuf field <code>int64 CreateTime = 21;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 22;</code>
      */
     private $CreateTime = 0;
     /**
      *最后更新时间
      *
-     * Generated from protobuf field <code>int64 ModifiedTime = 22;</code>
+     * Generated from protobuf field <code>int64 ModifiedTime = 23;</code>
      */
     private $ModifiedTime = 0;
     /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 23;</code>
+     * Generated from protobuf field <code>int64 EndTime = 24;</code>
      */
     private $EndTime = 0;
     /**
@@ -670,27 +676,53 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *买家信息
+     *买家备注
      *
-     * Generated from protobuf field <code>string BuyerMessage = 20;</code>
+     * Generated from protobuf field <code>string BuyerMemo = 20;</code>
      * @return string
      */
-    public function getBuyerMessage()
+    public function getBuyerMemo()
     {
-        return $this->BuyerMessage;
+        return $this->BuyerMemo;
     }
 
     /**
-     *买家信息
+     *买家备注
      *
-     * Generated from protobuf field <code>string BuyerMessage = 20;</code>
+     * Generated from protobuf field <code>string BuyerMemo = 20;</code>
      * @param string $var
      * @return $this
      */
-    public function setBuyerMessage($var)
+    public function setBuyerMemo($var)
     {
         GPBUtil::checkString($var, True);
-        $this->BuyerMessage = $var;
+        $this->BuyerMemo = $var;
+
+        return $this;
+    }
+
+    /**
+     *交易备注
+     *
+     * Generated from protobuf field <code>string TradeMemo = 21;</code>
+     * @return string
+     */
+    public function getTradeMemo()
+    {
+        return $this->TradeMemo;
+    }
+
+    /**
+     *交易备注
+     *
+     * Generated from protobuf field <code>string TradeMemo = 21;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTradeMemo($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->TradeMemo = $var;
 
         return $this;
     }
@@ -698,7 +730,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *创建时间 Status = TRADE_ACTIVE
      *
-     * Generated from protobuf field <code>int64 CreateTime = 21;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 22;</code>
      * @return int|string
      */
     public function getCreateTime()
@@ -709,7 +741,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *创建时间 Status = TRADE_ACTIVE
      *
-     * Generated from protobuf field <code>int64 CreateTime = 21;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 22;</code>
      * @param int|string $var
      * @return $this
      */
@@ -724,7 +756,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *最后更新时间
      *
-     * Generated from protobuf field <code>int64 ModifiedTime = 22;</code>
+     * Generated from protobuf field <code>int64 ModifiedTime = 23;</code>
      * @return int|string
      */
     public function getModifiedTime()
@@ -735,7 +767,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *最后更新时间
      *
-     * Generated from protobuf field <code>int64 ModifiedTime = 22;</code>
+     * Generated from protobuf field <code>int64 ModifiedTime = 23;</code>
      * @param int|string $var
      * @return $this
      */
@@ -750,7 +782,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 23;</code>
+     * Generated from protobuf field <code>int64 EndTime = 24;</code>
      * @return int|string
      */
     public function getEndTime()
@@ -761,7 +793,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 23;</code>
+     * Generated from protobuf field <code>int64 EndTime = 24;</code>
      * @param int|string $var
      * @return $this
      */
