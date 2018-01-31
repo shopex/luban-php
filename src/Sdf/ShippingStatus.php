@@ -16,28 +16,22 @@ class ShippingStatus
      */
     const SHIP_UNPROCESS = 0;
     /**
-     * 订单库存已确认
-     *
-     * Generated from protobuf enum <code>SHIP_VALIDATED = 1;</code>
-     */
-    const SHIP_VALIDATED = 1;
-    /**
      * 配货中
      *
-     * Generated from protobuf enum <code>SHIP_ALLOCATION = 2;</code>
+     * Generated from protobuf enum <code>SHIP_ALLOCATION = 1;</code>
      */
-    const SHIP_ALLOCATION = 2;
+    const SHIP_ALLOCATION = 1;
     /**
-     *已发货
+     * 已发货
      *
-     * Generated from protobuf enum <code>SHIP_ALL_SHIPPED = 3;</code>
+     * Generated from protobuf enum <code>SHIP_ALL_SHIPPED = 2;</code>
      */
-    const SHIP_ALL_SHIPPED = 3;
+    const SHIP_ALL_SHIPPED = 2;
     /**
-     *已发货
+     * 部分发货
      *
-     * Generated from protobuf enum <code>SHIP_PART_SHIPPED = 4;</code>
+     * Generated from protobuf enum <code>SHIP_PART_SHIPPED = 3;</code>
      */
-    const SHIP_PART_SHIPPED = 4;
+    const SHIP_PART_SHIPPED = 3;
 }
 
