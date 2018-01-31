@@ -44,12 +44,6 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     private $Quantity = 0;
     /**
-     *商品类别ID
-     *
-     * Generated from protobuf field <code>string CatId = 7;</code>
-     */
-    private $CatId = '';
-    /**
      *价格
      *
      * Generated from protobuf field <code>double Price = 8;</code>
@@ -209,32 +203,6 @@ class Order extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->Quantity = $var;
-
-        return $this;
-    }
-
-    /**
-     *商品类别ID
-     *
-     * Generated from protobuf field <code>string CatId = 7;</code>
-     * @return string
-     */
-    public function getCatId()
-    {
-        return $this->CatId;
-    }
-
-    /**
-     *商品类别ID
-     *
-     * Generated from protobuf field <code>string CatId = 7;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setCatId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->CatId = $var;
 
         return $this;
     }
