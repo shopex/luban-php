@@ -52,9 +52,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *子订单
      *
-     * Generated from protobuf field <code>repeated .luban.Order Order = 7;</code>
+     * Generated from protobuf field <code>repeated .luban.Order Orders = 7;</code>
      */
-    private $Order;
+    private $Orders;
     /**
      *货币类型  // https://www.currency-iso.org/en/home/tables/table-a1.html
      *
@@ -340,25 +340,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *子订单
      *
-     * Generated from protobuf field <code>repeated .luban.Order Order = 7;</code>
+     * Generated from protobuf field <code>repeated .luban.Order Orders = 7;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getOrder()
+    public function getOrders()
     {
-        return $this->Order;
+        return $this->Orders;
     }
 
     /**
      *子订单
      *
-     * Generated from protobuf field <code>repeated .luban.Order Order = 7;</code>
+     * Generated from protobuf field <code>repeated .luban.Order Orders = 7;</code>
      * @param \Shopex\Luban\Sdf\Order[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setOrder($var)
+    public function setOrders($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Order::class);
-        $this->Order = $arr;
+        $this->Orders = $arr;
 
         return $this;
     }
