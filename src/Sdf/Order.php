@@ -54,21 +54,25 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     private $ShippedQuantity = 0;
     /**
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 8;</code>
+     */
+    private $ShippingStatus = 0;
+    /**
      *价格
      *
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double Price = 9;</code>
      */
     private $Price = 0.0;
     /**
      *总额  Amount = Price * Quantity
      *
-     * Generated from protobuf field <code>double Amount = 9;</code>
+     * Generated from protobuf field <code>double Amount = 10;</code>
      */
     private $Amount = 0.0;
     /**
      *定制信息
      *
-     * Generated from protobuf field <code>string Customization = 10;</code>
+     * Generated from protobuf field <code>string Customization = 11;</code>
      */
     private $Customization = '';
     /**
@@ -260,9 +264,31 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 8;</code>
+     * @return int
+     */
+    public function getShippingStatus()
+    {
+        return $this->ShippingStatus;
+    }
+
+    /**
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setShippingStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\ShippingStatus::class);
+        $this->ShippingStatus = $var;
+
+        return $this;
+    }
+
+    /**
      *价格
      *
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double Price = 9;</code>
      * @return float
      */
     public function getPrice()
@@ -273,7 +299,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *价格
      *
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double Price = 9;</code>
      * @param float $var
      * @return $this
      */
@@ -288,7 +314,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *总额  Amount = Price * Quantity
      *
-     * Generated from protobuf field <code>double Amount = 9;</code>
+     * Generated from protobuf field <code>double Amount = 10;</code>
      * @return float
      */
     public function getAmount()
@@ -299,7 +325,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *总额  Amount = Price * Quantity
      *
-     * Generated from protobuf field <code>double Amount = 9;</code>
+     * Generated from protobuf field <code>double Amount = 10;</code>
      * @param float $var
      * @return $this
      */
@@ -314,7 +340,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *定制信息
      *
-     * Generated from protobuf field <code>string Customization = 10;</code>
+     * Generated from protobuf field <code>string Customization = 11;</code>
      * @return string
      */
     public function getCustomization()
@@ -325,7 +351,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *定制信息
      *
-     * Generated from protobuf field <code>string Customization = 10;</code>
+     * Generated from protobuf field <code>string Customization = 11;</code>
      * @param string $var
      * @return $this
      */

@@ -46,9 +46,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShipStatus ShipStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
      */
-    private $ShipStatus = 0;
+    private $ShippingStatus = 0;
     /**
      *子订单
      *
@@ -98,7 +98,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $DiscountFee = 0.0;
     /**
-     * 
+     *价格调整，+为增， -为减免
      *
      * Generated from protobuf field <code>double AdjustPrice = 15;</code>
      */
@@ -318,25 +318,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShipStatus ShipStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
      * @return int
      */
-    public function getShipStatus()
+    public function getShippingStatus()
     {
-        return $this->ShipStatus;
+        return $this->ShippingStatus;
     }
 
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShipStatus ShipStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
      * @param int $var
      * @return $this
      */
-    public function setShipStatus($var)
+    public function setShippingStatus($var)
     {
-        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\ShipStatus::class);
-        $this->ShipStatus = $var;
+        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\ShippingStatus::class);
+        $this->ShippingStatus = $var;
 
         return $this;
     }
@@ -550,7 +550,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 
+     *价格调整，+为增， -为减免
      *
      * Generated from protobuf field <code>double AdjustPrice = 15;</code>
      * @return float
@@ -561,7 +561,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 
+     *价格调整，+为增， -为减免
      *
      * Generated from protobuf field <code>double AdjustPrice = 15;</code>
      * @param float $var
