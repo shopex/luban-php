@@ -134,7 +134,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $BuyerMessage = '';
     /**
-     *创建时间
+     *创建时间 Status = TRADE_ACTIVE
      *
      * Generated from protobuf field <code>int64 CreateTime = 21;</code>
      */
@@ -146,13 +146,13 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $ModifiedTime = 0;
     /**
-     *支付时间
+     *支付时间 PayStatus = PAY_FINISH, PAY_TO_MEDIUM, PAY_PART
      *
      * Generated from protobuf field <code>int64 PayTime = 23;</code>
      */
     private $PayTime = 0;
     /**
-     *交易完成时间
+     *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
      * Generated from protobuf field <code>int64 EndTime = 24;</code>
      */
@@ -166,15 +166,15 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *支付信息
      *
-     * Generated from protobuf field <code>repeated .luban.Payment Payment = 30;</code>
+     * Generated from protobuf field <code>repeated .luban.Payment Payments = 30;</code>
      */
-    private $Payment;
+    private $Payments;
     /**
      *发货信息
      *
-     * Generated from protobuf field <code>repeated .luban.Shipment Shipment = 31;</code>
+     * Generated from protobuf field <code>repeated .luban.Shipment Shipments = 31;</code>
      */
-    private $Shipment;
+    private $Shipments;
     /**
      *扩展字段
      *
@@ -708,7 +708,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *创建时间
+     *创建时间 Status = TRADE_ACTIVE
      *
      * Generated from protobuf field <code>int64 CreateTime = 21;</code>
      * @return int|string
@@ -719,7 +719,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *创建时间
+     *创建时间 Status = TRADE_ACTIVE
      *
      * Generated from protobuf field <code>int64 CreateTime = 21;</code>
      * @param int|string $var
@@ -760,7 +760,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付时间
+     *支付时间 PayStatus = PAY_FINISH, PAY_TO_MEDIUM, PAY_PART
      *
      * Generated from protobuf field <code>int64 PayTime = 23;</code>
      * @return int|string
@@ -771,7 +771,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付时间
+     *支付时间 PayStatus = PAY_FINISH, PAY_TO_MEDIUM, PAY_PART
      *
      * Generated from protobuf field <code>int64 PayTime = 23;</code>
      * @param int|string $var
@@ -786,7 +786,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *交易完成时间
+     *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
      * Generated from protobuf field <code>int64 EndTime = 24;</code>
      * @return int|string
@@ -797,7 +797,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *交易完成时间
+     *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
      * Generated from protobuf field <code>int64 EndTime = 24;</code>
      * @param int|string $var
@@ -840,25 +840,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *支付信息
      *
-     * Generated from protobuf field <code>repeated .luban.Payment Payment = 30;</code>
+     * Generated from protobuf field <code>repeated .luban.Payment Payments = 30;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getPayment()
+    public function getPayments()
     {
-        return $this->Payment;
+        return $this->Payments;
     }
 
     /**
      *支付信息
      *
-     * Generated from protobuf field <code>repeated .luban.Payment Payment = 30;</code>
+     * Generated from protobuf field <code>repeated .luban.Payment Payments = 30;</code>
      * @param \Shopex\Luban\Sdf\Payment[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setPayment($var)
+    public function setPayments($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Payment::class);
-        $this->Payment = $arr;
+        $this->Payments = $arr;
 
         return $this;
     }
@@ -866,25 +866,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *发货信息
      *
-     * Generated from protobuf field <code>repeated .luban.Shipment Shipment = 31;</code>
+     * Generated from protobuf field <code>repeated .luban.Shipment Shipments = 31;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getShipment()
+    public function getShipments()
     {
-        return $this->Shipment;
+        return $this->Shipments;
     }
 
     /**
      *发货信息
      *
-     * Generated from protobuf field <code>repeated .luban.Shipment Shipment = 31;</code>
+     * Generated from protobuf field <code>repeated .luban.Shipment Shipments = 31;</code>
      * @param \Shopex\Luban\Sdf\Shipment[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setShipment($var)
+    public function setShipments($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Shipment::class);
-        $this->Shipment = $arr;
+        $this->Shipments = $arr;
 
         return $this;
     }

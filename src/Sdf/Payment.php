@@ -88,9 +88,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *支付时间, status=SUCC
      *
-     * Generated from protobuf field <code>int64 PaidTime = 15;</code>
+     * Generated from protobuf field <code>int64 PayTime = 15;</code>
      */
-    private $PaidTime = 0;
+    private $PayTime = 0;
     /**
      *交易完成时间, status=CANCEL/ERROR/SUCC
      *
@@ -436,25 +436,25 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *支付时间, status=SUCC
      *
-     * Generated from protobuf field <code>int64 PaidTime = 15;</code>
+     * Generated from protobuf field <code>int64 PayTime = 15;</code>
      * @return int|string
      */
-    public function getPaidTime()
+    public function getPayTime()
     {
-        return $this->PaidTime;
+        return $this->PayTime;
     }
 
     /**
      *支付时间, status=SUCC
      *
-     * Generated from protobuf field <code>int64 PaidTime = 15;</code>
+     * Generated from protobuf field <code>int64 PayTime = 15;</code>
      * @param int|string $var
      * @return $this
      */
-    public function setPaidTime($var)
+    public function setPayTime($var)
     {
         GPBUtil::checkInt64($var);
-        $this->PaidTime = $var;
+        $this->PayTime = $var;
 
         return $this;
     }
