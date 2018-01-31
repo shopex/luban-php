@@ -44,11 +44,17 @@ class Payment extends \Google\Protobuf\Internal\Message
      */
     private $TransId = '';
     /**
-     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 7;</code>
+     *支付时间
+     *
+     * Generated from protobuf field <code>int64 PaidTime = 8;</code>
+     */
+    private $PaidTime = 0;
+    /**
+     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 9;</code>
      */
     private $Status = 0;
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 10;</code>
      */
     private $Meta;
 
@@ -202,7 +208,33 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 7;</code>
+     *支付时间
+     *
+     * Generated from protobuf field <code>int64 PaidTime = 8;</code>
+     * @return int|string
+     */
+    public function getPaidTime()
+    {
+        return $this->PaidTime;
+    }
+
+    /**
+     *支付时间
+     *
+     * Generated from protobuf field <code>int64 PaidTime = 8;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setPaidTime($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->PaidTime = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 9;</code>
      * @return int
      */
     public function getStatus()
@@ -211,7 +243,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 7;</code>
+     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 9;</code>
      * @param int $var
      * @return $this
      */
@@ -224,7 +256,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 10;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMeta()
@@ -233,7 +265,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 10;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

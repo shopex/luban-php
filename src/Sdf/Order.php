@@ -56,19 +56,25 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     private $Price = 0.0;
     /**
+     * 总额  Amount = Price * Quantity
+     *
+     * Generated from protobuf field <code>double Amount = 9;</code>
+     */
+    private $Amount = 0.0;
+    /**
      * 买家信息
      *
-     * Generated from protobuf field <code>string Customization = 9;</code>
+     * Generated from protobuf field <code>string Customization = 10;</code>
      */
     private $Customization = '';
     /**
      * 发货时间	
      *
-     * Generated from protobuf field <code>int64 ConsignTime = 10;</code>
+     * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
      */
     private $ConsignTime = 0;
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 11;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 12;</code>
      */
     private $Meta;
 
@@ -260,9 +266,35 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 总额  Amount = Price * Quantity
+     *
+     * Generated from protobuf field <code>double Amount = 9;</code>
+     * @return float
+     */
+    public function getAmount()
+    {
+        return $this->Amount;
+    }
+
+    /**
+     * 总额  Amount = Price * Quantity
+     *
+     * Generated from protobuf field <code>double Amount = 9;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setAmount($var)
+    {
+        GPBUtil::checkDouble($var);
+        $this->Amount = $var;
+
+        return $this;
+    }
+
+    /**
      * 买家信息
      *
-     * Generated from protobuf field <code>string Customization = 9;</code>
+     * Generated from protobuf field <code>string Customization = 10;</code>
      * @return string
      */
     public function getCustomization()
@@ -273,7 +305,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 买家信息
      *
-     * Generated from protobuf field <code>string Customization = 9;</code>
+     * Generated from protobuf field <code>string Customization = 10;</code>
      * @param string $var
      * @return $this
      */
@@ -288,7 +320,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 发货时间	
      *
-     * Generated from protobuf field <code>int64 ConsignTime = 10;</code>
+     * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
      * @return int|string
      */
     public function getConsignTime()
@@ -299,7 +331,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      * 发货时间	
      *
-     * Generated from protobuf field <code>int64 ConsignTime = 10;</code>
+     * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
      * @param int|string $var
      * @return $this
      */
@@ -312,7 +344,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 11;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 12;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMeta()
@@ -321,7 +353,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 11;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 12;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

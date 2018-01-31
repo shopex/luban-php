@@ -56,7 +56,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $Order;
     /**
-     *商品总额
+     *商品总额  // Order1.Amount + Order2.Amount ...
      *
      * Generated from protobuf field <code>double GoodsAmount = 8;</code>
      */
@@ -364,7 +364,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *商品总额
+     *商品总额  // Order1.Amount + Order2.Amount ...
      *
      * Generated from protobuf field <code>double GoodsAmount = 8;</code>
      * @return float
@@ -375,7 +375,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *商品总额
+     *商品总额  // Order1.Amount + Order2.Amount ...
      *
      * Generated from protobuf field <code>double GoodsAmount = 8;</code>
      * @param float $var
