@@ -14,47 +14,91 @@ use Google\Protobuf\Internal\GPBUtil;
 class Payment extends \Google\Protobuf\Internal\Message
 {
     /**
+     * 付款单号
+     *
      * Generated from protobuf field <code>string PaymentId = 1;</code>
      */
     private $PaymentId = '';
     /**
+     * 订单号
+     *
      * Generated from protobuf field <code>string Tid = 2;</code>
      */
     private $Tid = '';
     /**
+     * 支付金额
+     *
      * Generated from protobuf field <code>double Amount = 3;</code>
      */
     private $Amount = 0.0;
     /**
+     * 货币类型
+     *
+     * Generated from protobuf field <code>string Currency = 4;</code>
+     */
+    private $Currency = '';
+    /**
+     * 货币金额
+     *
+     * Generated from protobuf field <code>string CurrencyAmount = 5;</code>
+     */
+    private $CurrencyAmount = '';
+    /**
      * alipay-h5  alipay-app 具体支付方法
      *
-     * Generated from protobuf field <code>string Method = 4;</code>
+     * Generated from protobuf field <code>string Method = 6;</code>
      */
     private $Method = '';
     /**
-     *支付渠道
+     * 支付渠道
      *
-     * Generated from protobuf field <code>string Channel = 5;</code>
+     * Generated from protobuf field <code>string Channel = 7;</code>
      */
     private $Channel = '';
     /**
-     *支付流水号
-     *
-     * Generated from protobuf field <code>string TransId = 6;</code>
+     * Generated from protobuf field <code>.luban.PaymentType Type = 8;</code>
      */
-    private $TransId = '';
+    private $Type = 0;
     /**
-     *支付时间
-     *
-     * Generated from protobuf field <code>int64 PaidTime = 8;</code>
-     */
-    private $PaidTime = 0;
-    /**
-     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 9;</code>
+     * Generated from protobuf field <code>.luban.PaymentStatus Status = 9;</code>
      */
     private $Status = 0;
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 10;</code>
+     * Generated from protobuf field <code>string ErrMessage = 11;</code>
+     */
+    private $ErrMessage = '';
+    /**
+     *支付流水号
+     *
+     * Generated from protobuf field <code>string TransId = 12;</code>
+     */
+    private $TransId = '';
+    /**
+     *创建时间, status=ready
+     *
+     * Generated from protobuf field <code>int64 CreateTime = 13;</code>
+     */
+    private $CreateTime = 0;
+    /**
+     *付款超时时间
+     *
+     * Generated from protobuf field <code>int64 ExpireTime = 14;</code>
+     */
+    private $ExpireTime = 0;
+    /**
+     *支付时间, status=SUCC
+     *
+     * Generated from protobuf field <code>int64 PaidTime = 15;</code>
+     */
+    private $PaidTime = 0;
+    /**
+     *交易完成时间, status=CANCEL/ERROR/SUCC
+     *
+     * Generated from protobuf field <code>int64 EndTime = 16;</code>
+     */
+    private $EndTime = 0;
+    /**
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 20;</code>
      */
     private $Meta;
 
@@ -64,6 +108,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 付款单号
+     *
      * Generated from protobuf field <code>string PaymentId = 1;</code>
      * @return string
      */
@@ -73,6 +119,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 付款单号
+     *
      * Generated from protobuf field <code>string PaymentId = 1;</code>
      * @param string $var
      * @return $this
@@ -86,6 +134,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 订单号
+     *
      * Generated from protobuf field <code>string Tid = 2;</code>
      * @return string
      */
@@ -95,6 +145,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 订单号
+     *
      * Generated from protobuf field <code>string Tid = 2;</code>
      * @param string $var
      * @return $this
@@ -108,6 +160,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 支付金额
+     *
      * Generated from protobuf field <code>double Amount = 3;</code>
      * @return float
      */
@@ -117,6 +171,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 支付金额
+     *
      * Generated from protobuf field <code>double Amount = 3;</code>
      * @param float $var
      * @return $this
@@ -130,9 +186,61 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * 货币类型
+     *
+     * Generated from protobuf field <code>string Currency = 4;</code>
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->Currency;
+    }
+
+    /**
+     * 货币类型
+     *
+     * Generated from protobuf field <code>string Currency = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCurrency($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->Currency = $var;
+
+        return $this;
+    }
+
+    /**
+     * 货币金额
+     *
+     * Generated from protobuf field <code>string CurrencyAmount = 5;</code>
+     * @return string
+     */
+    public function getCurrencyAmount()
+    {
+        return $this->CurrencyAmount;
+    }
+
+    /**
+     * 货币金额
+     *
+     * Generated from protobuf field <code>string CurrencyAmount = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCurrencyAmount($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->CurrencyAmount = $var;
+
+        return $this;
+    }
+
+    /**
      * alipay-h5  alipay-app 具体支付方法
      *
-     * Generated from protobuf field <code>string Method = 4;</code>
+     * Generated from protobuf field <code>string Method = 6;</code>
      * @return string
      */
     public function getMethod()
@@ -143,7 +251,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      * alipay-h5  alipay-app 具体支付方法
      *
-     * Generated from protobuf field <code>string Method = 4;</code>
+     * Generated from protobuf field <code>string Method = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -156,9 +264,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付渠道
+     * 支付渠道
      *
-     * Generated from protobuf field <code>string Channel = 5;</code>
+     * Generated from protobuf field <code>string Channel = 7;</code>
      * @return string
      */
     public function getChannel()
@@ -167,9 +275,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付渠道
+     * 支付渠道
      *
-     * Generated from protobuf field <code>string Channel = 5;</code>
+     * Generated from protobuf field <code>string Channel = 7;</code>
      * @param string $var
      * @return $this
      */
@@ -182,9 +290,75 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>.luban.PaymentType Type = 8;</code>
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->Type;
+    }
+
+    /**
+     * Generated from protobuf field <code>.luban.PaymentType Type = 8;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setType($var)
+    {
+        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\PaymentType::class);
+        $this->Type = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.luban.PaymentStatus Status = 9;</code>
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->Status;
+    }
+
+    /**
+     * Generated from protobuf field <code>.luban.PaymentStatus Status = 9;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\PaymentStatus::class);
+        $this->Status = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ErrMessage = 11;</code>
+     * @return string
+     */
+    public function getErrMessage()
+    {
+        return $this->ErrMessage;
+    }
+
+    /**
+     * Generated from protobuf field <code>string ErrMessage = 11;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setErrMessage($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ErrMessage = $var;
+
+        return $this;
+    }
+
+    /**
      *支付流水号
      *
-     * Generated from protobuf field <code>string TransId = 6;</code>
+     * Generated from protobuf field <code>string TransId = 12;</code>
      * @return string
      */
     public function getTransId()
@@ -195,7 +369,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      *支付流水号
      *
-     * Generated from protobuf field <code>string TransId = 6;</code>
+     * Generated from protobuf field <code>string TransId = 12;</code>
      * @param string $var
      * @return $this
      */
@@ -208,9 +382,61 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付时间
+     *创建时间, status=ready
      *
-     * Generated from protobuf field <code>int64 PaidTime = 8;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 13;</code>
+     * @return int|string
+     */
+    public function getCreateTime()
+    {
+        return $this->CreateTime;
+    }
+
+    /**
+     *创建时间, status=ready
+     *
+     * Generated from protobuf field <code>int64 CreateTime = 13;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCreateTime($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->CreateTime = $var;
+
+        return $this;
+    }
+
+    /**
+     *付款超时时间
+     *
+     * Generated from protobuf field <code>int64 ExpireTime = 14;</code>
+     * @return int|string
+     */
+    public function getExpireTime()
+    {
+        return $this->ExpireTime;
+    }
+
+    /**
+     *付款超时时间
+     *
+     * Generated from protobuf field <code>int64 ExpireTime = 14;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setExpireTime($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->ExpireTime = $var;
+
+        return $this;
+    }
+
+    /**
+     *支付时间, status=SUCC
+     *
+     * Generated from protobuf field <code>int64 PaidTime = 15;</code>
      * @return int|string
      */
     public function getPaidTime()
@@ -219,9 +445,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付时间
+     *支付时间, status=SUCC
      *
-     * Generated from protobuf field <code>int64 PaidTime = 8;</code>
+     * Generated from protobuf field <code>int64 PaidTime = 15;</code>
      * @param int|string $var
      * @return $this
      */
@@ -234,29 +460,33 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 9;</code>
-     * @return int
+     *交易完成时间, status=CANCEL/ERROR/SUCC
+     *
+     * Generated from protobuf field <code>int64 EndTime = 16;</code>
+     * @return int|string
      */
-    public function getStatus()
+    public function getEndTime()
     {
-        return $this->Status;
+        return $this->EndTime;
     }
 
     /**
-     * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 9;</code>
-     * @param int $var
+     *交易完成时间, status=CANCEL/ERROR/SUCC
+     *
+     * Generated from protobuf field <code>int64 EndTime = 16;</code>
+     * @param int|string $var
      * @return $this
      */
-    public function setStatus($var)
+    public function setEndTime($var)
     {
-        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\Payment_EnumStatus::class);
-        $this->Status = $var;
+        GPBUtil::checkInt64($var);
+        $this->EndTime = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 10;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 20;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMeta()
@@ -265,7 +495,7 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 10;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 20;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
