@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Payment extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>repeated string TradeId = 1;</code>
+     * Generated from protobuf field <code>string Tid = 1;</code>
      */
-    private $TradeId;
+    private $Tid = '';
     /**
      * Generated from protobuf field <code>double Amount = 2;</code>
      */
@@ -43,6 +43,10 @@ class Payment extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.luban.Payment.EnumStatus Status = 6;</code>
      */
     private $Status = 0;
+    /**
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
+     */
+    private $Meta;
 
     public function __construct() {
         \GPBMetadata\Shopex::initOnce();
@@ -50,23 +54,23 @@ class Payment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated string TradeId = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * Generated from protobuf field <code>string Tid = 1;</code>
+     * @return string
      */
-    public function getTradeId()
+    public function getTid()
     {
-        return $this->TradeId;
+        return $this->Tid;
     }
 
     /**
-     * Generated from protobuf field <code>repeated string TradeId = 1;</code>
-     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>string Tid = 1;</code>
+     * @param string $var
      * @return $this
      */
-    public function setTradeId($var)
+    public function setTid($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
-        $this->TradeId = $arr;
+        GPBUtil::checkString($var, True);
+        $this->Tid = $var;
 
         return $this;
     }
@@ -189,6 +193,28 @@ class Payment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\Payment_EnumStatus::class);
         $this->Status = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getMeta()
+    {
+        return $this->Meta;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
+     * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setMeta($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Meta::class);
+        $this->Meta = $arr;
 
         return $this;
     }

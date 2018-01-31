@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Trade extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string TradeBn = 1;</code>
+     * Generated from protobuf field <code>string Tid = 1;</code>
      */
-    private $TradeBn = '';
+    private $Tid = '';
     /**
      * Generated from protobuf field <code>string BuyerId = 2;</code>
      */
@@ -44,13 +44,13 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $Order;
     /**
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double ItemPrice = 8;</code>
      */
-    private $Price = 0.0;
+    private $ItemPrice = 0.0;
     /**
-     * Generated from protobuf field <code>double Payed = 9;</code>
+     * Generated from protobuf field <code>double PaidPrice = 9;</code>
      */
-    private $Payed = 0.0;
+    private $PaidPrice = 0.0;
     /**
      * Generated from protobuf field <code>double PostFee = 10;</code>
      */
@@ -107,6 +107,10 @@ class Trade extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 23;</code>
      */
     private $Meta;
+    /**
+     * Generated from protobuf field <code>repeated .luban.Payment Payment = 24;</code>
+     */
+    private $Payment;
 
     public function __construct() {
         \GPBMetadata\Shopex::initOnce();
@@ -114,23 +118,23 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string TradeBn = 1;</code>
+     * Generated from protobuf field <code>string Tid = 1;</code>
      * @return string
      */
-    public function getTradeBn()
+    public function getTid()
     {
-        return $this->TradeBn;
+        return $this->Tid;
     }
 
     /**
-     * Generated from protobuf field <code>string TradeBn = 1;</code>
+     * Generated from protobuf field <code>string Tid = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setTradeBn($var)
+    public function setTid($var)
     {
         GPBUtil::checkString($var, True);
-        $this->TradeBn = $var;
+        $this->Tid = $var;
 
         return $this;
     }
@@ -272,45 +276,45 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double ItemPrice = 8;</code>
      * @return float
      */
-    public function getPrice()
+    public function getItemPrice()
     {
-        return $this->Price;
+        return $this->ItemPrice;
     }
 
     /**
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double ItemPrice = 8;</code>
      * @param float $var
      * @return $this
      */
-    public function setPrice($var)
+    public function setItemPrice($var)
     {
         GPBUtil::checkDouble($var);
-        $this->Price = $var;
+        $this->ItemPrice = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>double Payed = 9;</code>
+     * Generated from protobuf field <code>double PaidPrice = 9;</code>
      * @return float
      */
-    public function getPayed()
+    public function getPaidPrice()
     {
-        return $this->Payed;
+        return $this->PaidPrice;
     }
 
     /**
-     * Generated from protobuf field <code>double Payed = 9;</code>
+     * Generated from protobuf field <code>double PaidPrice = 9;</code>
      * @param float $var
      * @return $this
      */
-    public function setPayed($var)
+    public function setPaidPrice($var)
     {
         GPBUtil::checkDouble($var);
-        $this->Payed = $var;
+        $this->PaidPrice = $var;
 
         return $this;
     }
@@ -619,6 +623,28 @@ class Trade extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Meta::class);
         $this->Meta = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .luban.Payment Payment = 24;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getPayment()
+    {
+        return $this->Payment;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .luban.Payment Payment = 24;</code>
+     * @param \Shopex\Luban\Sdf\Payment[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setPayment($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Payment::class);
+        $this->Payment = $arr;
 
         return $this;
     }
