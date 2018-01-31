@@ -10,37 +10,37 @@ namespace Shopex\Luban\Sdf;
 class PayStatus
 {
     /**
-     * 未付款,
+     *未付款,
      *
      * Generated from protobuf enum <code>PAY_NO = 0;</code>
      */
     const PAY_NO = 0;
     /**
-     * 已付款,
+     *已付款,
      *
      * Generated from protobuf enum <code>PAY_FINISH = 1;</code>
      */
     const PAY_FINISH = 1;
     /**
-     * 付款至担保交易,
+     *付款至担保交易,
      *
      * Generated from protobuf enum <code>PAY_TO_MEDIUM = 2;</code>
      */
     const PAY_TO_MEDIUM = 2;
     /**
-     * 部分付款,
+     *部分付款,
      *
      * Generated from protobuf enum <code>PAY_PART = 3;</code>
      */
     const PAY_PART = 3;
     /**
-     * 部分退款,
+     *部分退款,
      *
      * Generated from protobuf enum <code>REFUND_PART = 4;</code>
      */
     const REFUND_PART = 4;
     /**
-     * 全额退
+     *全额退
      *
      * Generated from protobuf enum <code>REFUND_ALL = 5;</code>
      */

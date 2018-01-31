@@ -68,13 +68,13 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $GoodsAmount = 0.0;
     /**
-     *支付总额
+     *支付总额 
      *
      * Generated from protobuf field <code>double PaidAmount = 10;</code>
      */
     private $PaidAmount = 0.0;
     /**
-     *最终交易金额	
+     *最终交易金额 FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
      *
      * Generated from protobuf field <code>double FinalAmount = 11;</code>
      */
@@ -98,7 +98,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $DiscountFee = 0.0;
     /**
-     * FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
+     * 
      *
      * Generated from protobuf field <code>double AdjustPrice = 15;</code>
      */
@@ -422,7 +422,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付总额
+     *支付总额 
      *
      * Generated from protobuf field <code>double PaidAmount = 10;</code>
      * @return float
@@ -433,7 +433,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付总额
+     *支付总额 
      *
      * Generated from protobuf field <code>double PaidAmount = 10;</code>
      * @param float $var
@@ -448,7 +448,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *最终交易金额	
+     *最终交易金额 FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
      *
      * Generated from protobuf field <code>double FinalAmount = 11;</code>
      * @return float
@@ -459,7 +459,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *最终交易金额	
+     *最终交易金额 FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
      *
      * Generated from protobuf field <code>double FinalAmount = 11;</code>
      * @param float $var
@@ -552,7 +552,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
+     * 
      *
      * Generated from protobuf field <code>double AdjustPrice = 15;</code>
      * @return float
@@ -563,7 +563,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
+     * 
      *
      * Generated from protobuf field <code>double AdjustPrice = 15;</code>
      * @param float $var

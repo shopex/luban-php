@@ -10,10 +10,14 @@ namespace Shopex\Luban\Sdf;
 class OrderType
 {
     /**
+     *实体
+     *
      * Generated from protobuf enum <code>PHYSICAL = 0;</code>
      */
     const PHYSICAL = 0;
     /**
+     *虚拟
+     *
      * Generated from protobuf enum <code>DIGTAL = 1;</code>
      */
     const DIGTAL = 1;

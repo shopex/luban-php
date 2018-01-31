@@ -14,10 +14,14 @@ use Google\Protobuf\Internal\GPBUtil;
 class Invoice extends \Google\Protobuf\Internal\Message
 {
     /**
+     *发票模式
+     *
      * Generated from protobuf field <code>.luban.Invoice.EnumMode Mode = 1;</code>
      */
     private $Mode = 0;
     /**
+     *发票类型	
+     *
      * Generated from protobuf field <code>.luban.Invoice.EnumType Type = 2;</code>
      */
     private $Type = 0;
@@ -70,6 +74,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *发票模式
+     *
      * Generated from protobuf field <code>.luban.Invoice.EnumMode Mode = 1;</code>
      * @return int
      */
@@ -79,6 +85,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *发票模式
+     *
      * Generated from protobuf field <code>.luban.Invoice.EnumMode Mode = 1;</code>
      * @param int $var
      * @return $this
@@ -92,6 +100,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *发票类型	
+     *
      * Generated from protobuf field <code>.luban.Invoice.EnumType Type = 2;</code>
      * @return int
      */
@@ -101,6 +111,8 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *发票类型	
+     *
      * Generated from protobuf field <code>.luban.Invoice.EnumType Type = 2;</code>
      * @param int $var
      * @return $this

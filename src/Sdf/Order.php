@@ -20,13 +20,13 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     private $Tid = '';
     /**
-     * 商品id
+     *商品id
      *
      * Generated from protobuf field <code>string SkuId = 3;</code>
      */
     private $SkuId = '';
     /**
-     * 商品名称
+     *商品名称
      *
      * Generated from protobuf field <code>string SkuName = 4;</code>
      */
@@ -38,37 +38,37 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     private $Type = 0;
     /**
-     * 数量
+     *数量
      *
      * Generated from protobuf field <code>int64 Quantity = 6;</code>
      */
     private $Quantity = 0;
     /**
-     * 商品类别ID
+     *商品类别ID
      *
      * Generated from protobuf field <code>string CatId = 7;</code>
      */
     private $CatId = '';
     /**
-     * 价格
+     *价格
      *
      * Generated from protobuf field <code>double Price = 8;</code>
      */
     private $Price = 0.0;
     /**
-     * 总额  Amount = Price * Quantity
+     *总额  Amount = Price * Quantity
      *
      * Generated from protobuf field <code>double Amount = 9;</code>
      */
     private $Amount = 0.0;
     /**
-     * 买家信息
+     *买家信息
      *
      * Generated from protobuf field <code>string Customization = 10;</code>
      */
     private $Customization = '';
     /**
-     * 发货时间	
+     *发货时间	
      *
      * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
      */
@@ -110,7 +110,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 商品id
+     *商品id
      *
      * Generated from protobuf field <code>string SkuId = 3;</code>
      * @return string
@@ -121,7 +121,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 商品id
+     *商品id
      *
      * Generated from protobuf field <code>string SkuId = 3;</code>
      * @param string $var
@@ -136,7 +136,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 商品名称
+     *商品名称
      *
      * Generated from protobuf field <code>string SkuName = 4;</code>
      * @return string
@@ -147,7 +147,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 商品名称
+     *商品名称
      *
      * Generated from protobuf field <code>string SkuName = 4;</code>
      * @param string $var
@@ -188,7 +188,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 数量
+     *数量
      *
      * Generated from protobuf field <code>int64 Quantity = 6;</code>
      * @return int|string
@@ -199,7 +199,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 数量
+     *数量
      *
      * Generated from protobuf field <code>int64 Quantity = 6;</code>
      * @param int|string $var
@@ -214,7 +214,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 商品类别ID
+     *商品类别ID
      *
      * Generated from protobuf field <code>string CatId = 7;</code>
      * @return string
@@ -225,7 +225,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 商品类别ID
+     *商品类别ID
      *
      * Generated from protobuf field <code>string CatId = 7;</code>
      * @param string $var
@@ -240,7 +240,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 价格
+     *价格
      *
      * Generated from protobuf field <code>double Price = 8;</code>
      * @return float
@@ -251,7 +251,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 价格
+     *价格
      *
      * Generated from protobuf field <code>double Price = 8;</code>
      * @param float $var
@@ -266,7 +266,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 总额  Amount = Price * Quantity
+     *总额  Amount = Price * Quantity
      *
      * Generated from protobuf field <code>double Amount = 9;</code>
      * @return float
@@ -277,7 +277,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 总额  Amount = Price * Quantity
+     *总额  Amount = Price * Quantity
      *
      * Generated from protobuf field <code>double Amount = 9;</code>
      * @param float $var
@@ -292,7 +292,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 买家信息
+     *买家信息
      *
      * Generated from protobuf field <code>string Customization = 10;</code>
      * @return string
@@ -303,7 +303,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 买家信息
+     *买家信息
      *
      * Generated from protobuf field <code>string Customization = 10;</code>
      * @param string $var
@@ -318,7 +318,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 发货时间	
+     *发货时间	
      *
      * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
      * @return int|string
@@ -329,7 +329,7 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 发货时间	
+     *发货时间	
      *
      * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
      * @param int|string $var
