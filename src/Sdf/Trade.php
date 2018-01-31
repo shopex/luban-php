@@ -146,23 +146,11 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $ModifiedTime = 0;
     /**
-     *支付时间 PayStatus = PAY_FINISH, PAY_TO_MEDIUM, PAY_PART
-     *
-     * Generated from protobuf field <code>int64 PayTime = 23;</code>
-     */
-    private $PayTime = 0;
-    /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 24;</code>
+     * Generated from protobuf field <code>int64 EndTime = 23;</code>
      */
     private $EndTime = 0;
-    /**
-     *是否货到付款
-     *
-     * Generated from protobuf field <code>bool IsCod = 25;</code>
-     */
-    private $IsCod = false;
     /**
      *支付信息
      *
@@ -760,35 +748,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付时间 PayStatus = PAY_FINISH, PAY_TO_MEDIUM, PAY_PART
-     *
-     * Generated from protobuf field <code>int64 PayTime = 23;</code>
-     * @return int|string
-     */
-    public function getPayTime()
-    {
-        return $this->PayTime;
-    }
-
-    /**
-     *支付时间 PayStatus = PAY_FINISH, PAY_TO_MEDIUM, PAY_PART
-     *
-     * Generated from protobuf field <code>int64 PayTime = 23;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setPayTime($var)
-    {
-        GPBUtil::checkInt64($var);
-        $this->PayTime = $var;
-
-        return $this;
-    }
-
-    /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 24;</code>
+     * Generated from protobuf field <code>int64 EndTime = 23;</code>
      * @return int|string
      */
     public function getEndTime()
@@ -799,7 +761,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 24;</code>
+     * Generated from protobuf field <code>int64 EndTime = 23;</code>
      * @param int|string $var
      * @return $this
      */
@@ -807,32 +769,6 @@ class Trade extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->EndTime = $var;
-
-        return $this;
-    }
-
-    /**
-     *是否货到付款
-     *
-     * Generated from protobuf field <code>bool IsCod = 25;</code>
-     * @return bool
-     */
-    public function getIsCod()
-    {
-        return $this->IsCod;
-    }
-
-    /**
-     *是否货到付款
-     *
-     * Generated from protobuf field <code>bool IsCod = 25;</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setIsCod($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->IsCod = $var;
 
         return $this;
     }
