@@ -32,6 +32,10 @@ class Shipment extends \Google\Protobuf\Internal\Message
      */
     private $CreateTime = 0;
     /**
+     * Generated from protobuf field <code>repeated .luban.ShipItem Items = 8;</code>
+     */
+    private $Items;
+    /**
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 10;</code>
      */
     private $Meta;
@@ -129,6 +133,28 @@ class Shipment extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt64($var);
         $this->CreateTime = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .luban.ShipItem Items = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getItems()
+    {
+        return $this->Items;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .luban.ShipItem Items = 8;</code>
+     * @param \Shopex\Luban\Sdf\ShipItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setItems($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\ShipItem::class);
+        $this->Items = $arr;
 
         return $this;
     }

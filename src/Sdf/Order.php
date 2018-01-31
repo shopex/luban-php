@@ -14,9 +14,13 @@ use Google\Protobuf\Internal\GPBUtil;
 class Order extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Generated from protobuf field <code>string Id = 1;</code>
+     */
+    private $Id = '';
+    /**
      *交易单号
      *
-     * Generated from protobuf field <code>string Tid = 1;</code>
+     * Generated from protobuf field <code>string Tid = 2;</code>
      */
     private $Tid = '';
     /**
@@ -46,27 +50,21 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *价格
      *
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double Price = 7;</code>
      */
     private $Price = 0.0;
     /**
      *总额  Amount = Price * Quantity
      *
-     * Generated from protobuf field <code>double Amount = 9;</code>
+     * Generated from protobuf field <code>double Amount = 8;</code>
      */
     private $Amount = 0.0;
     /**
-     *买家信息
+     *定制信息
      *
-     * Generated from protobuf field <code>string Customization = 10;</code>
+     * Generated from protobuf field <code>string Customization = 9;</code>
      */
     private $Customization = '';
-    /**
-     *发货时间	
-     *
-     * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
-     */
-    private $ConsignTime = 0;
     /**
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 12;</code>
      */
@@ -78,9 +76,31 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>string Id = 1;</code>
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->Id;
+    }
+
+    /**
+     * Generated from protobuf field <code>string Id = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->Id = $var;
+
+        return $this;
+    }
+
+    /**
      *交易单号
      *
-     * Generated from protobuf field <code>string Tid = 1;</code>
+     * Generated from protobuf field <code>string Tid = 2;</code>
      * @return string
      */
     public function getTid()
@@ -91,7 +111,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *交易单号
      *
-     * Generated from protobuf field <code>string Tid = 1;</code>
+     * Generated from protobuf field <code>string Tid = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -210,7 +230,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *价格
      *
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double Price = 7;</code>
      * @return float
      */
     public function getPrice()
@@ -221,7 +241,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *价格
      *
-     * Generated from protobuf field <code>double Price = 8;</code>
+     * Generated from protobuf field <code>double Price = 7;</code>
      * @param float $var
      * @return $this
      */
@@ -236,7 +256,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *总额  Amount = Price * Quantity
      *
-     * Generated from protobuf field <code>double Amount = 9;</code>
+     * Generated from protobuf field <code>double Amount = 8;</code>
      * @return float
      */
     public function getAmount()
@@ -247,7 +267,7 @@ class Order extends \Google\Protobuf\Internal\Message
     /**
      *总额  Amount = Price * Quantity
      *
-     * Generated from protobuf field <code>double Amount = 9;</code>
+     * Generated from protobuf field <code>double Amount = 8;</code>
      * @param float $var
      * @return $this
      */
@@ -260,9 +280,9 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *买家信息
+     *定制信息
      *
-     * Generated from protobuf field <code>string Customization = 10;</code>
+     * Generated from protobuf field <code>string Customization = 9;</code>
      * @return string
      */
     public function getCustomization()
@@ -271,9 +291,9 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *买家信息
+     *定制信息
      *
-     * Generated from protobuf field <code>string Customization = 10;</code>
+     * Generated from protobuf field <code>string Customization = 9;</code>
      * @param string $var
      * @return $this
      */
@@ -281,32 +301,6 @@ class Order extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->Customization = $var;
-
-        return $this;
-    }
-
-    /**
-     *发货时间	
-     *
-     * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
-     * @return int|string
-     */
-    public function getConsignTime()
-    {
-        return $this->ConsignTime;
-    }
-
-    /**
-     *发货时间	
-     *
-     * Generated from protobuf field <code>int64 ConsignTime = 11;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setConsignTime($var)
-    {
-        GPBUtil::checkInt64($var);
-        $this->ConsignTime = $var;
 
         return $this;
     }
