@@ -17,11 +17,11 @@ class DealerClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \Shopex\Luban\Sdf\Trade $argument input argument
+     * @param \Shopex\Luban\Sdf\DealRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function Deal(\Shopex\Luban\Sdf\Trade $argument,
+    public function Deal(\Shopex\Luban\Sdf\DealRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/luban.Dealer/Deal',
         $argument,
