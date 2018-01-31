@@ -26,41 +26,51 @@ class Address extends \Google\Protobuf\Internal\Message
      */
     private $Gender = 0;
     /**
+     * Generated from protobuf field <code>string Email = 4;</code>
+     */
+    private $Email = '';
+    /**
      *省份
      *
-     * Generated from protobuf field <code>string Province = 4;</code>
+     * Generated from protobuf field <code>string Province = 5;</code>
      */
     private $Province = '';
     /**
      *市
      *
-     * Generated from protobuf field <code>string City = 5;</code>
+     * Generated from protobuf field <code>string City = 6;</code>
      */
     private $City = '';
     /**
      *区
      *
-     * Generated from protobuf field <code>string District = 6;</code>
+     * Generated from protobuf field <code>string District = 7;</code>
      */
     private $District = '';
     /**
      *街道
      *
-     * Generated from protobuf field <code>string SubDistrict = 7;</code>
+     * Generated from protobuf field <code>string SubDistrict = 8;</code>
      */
     private $SubDistrict = '';
     /**
-     * Generated from protobuf field <code>string Zip = 8;</code>
+     * Generated from protobuf field <code>string Zip = 9;</code>
      */
     private $Zip = '';
     /**
-     * Generated from protobuf field <code>string Address1 = 9;</code>
+     * Generated from protobuf field <code>string Address1 = 10;</code>
      */
     private $Address1 = '';
     /**
-     * Generated from protobuf field <code>string Address2 = 10;</code>
+     * Generated from protobuf field <code>string Address2 = 11;</code>
      */
     private $Address2 = '';
+    /**
+     *扩展字段	
+     *
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 20;</code>
+     */
+    private $Meta;
 
     public function __construct() {
         \GPBMetadata\Support::initOnce();
@@ -134,9 +144,31 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>string Email = 4;</code>
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->Email;
+    }
+
+    /**
+     * Generated from protobuf field <code>string Email = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setEmail($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->Email = $var;
+
+        return $this;
+    }
+
+    /**
      *省份
      *
-     * Generated from protobuf field <code>string Province = 4;</code>
+     * Generated from protobuf field <code>string Province = 5;</code>
      * @return string
      */
     public function getProvince()
@@ -147,7 +179,7 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      *省份
      *
-     * Generated from protobuf field <code>string Province = 4;</code>
+     * Generated from protobuf field <code>string Province = 5;</code>
      * @param string $var
      * @return $this
      */
@@ -162,7 +194,7 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      *市
      *
-     * Generated from protobuf field <code>string City = 5;</code>
+     * Generated from protobuf field <code>string City = 6;</code>
      * @return string
      */
     public function getCity()
@@ -173,7 +205,7 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      *市
      *
-     * Generated from protobuf field <code>string City = 5;</code>
+     * Generated from protobuf field <code>string City = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -188,7 +220,7 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      *区
      *
-     * Generated from protobuf field <code>string District = 6;</code>
+     * Generated from protobuf field <code>string District = 7;</code>
      * @return string
      */
     public function getDistrict()
@@ -199,7 +231,7 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      *区
      *
-     * Generated from protobuf field <code>string District = 6;</code>
+     * Generated from protobuf field <code>string District = 7;</code>
      * @param string $var
      * @return $this
      */
@@ -214,7 +246,7 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      *街道
      *
-     * Generated from protobuf field <code>string SubDistrict = 7;</code>
+     * Generated from protobuf field <code>string SubDistrict = 8;</code>
      * @return string
      */
     public function getSubDistrict()
@@ -225,7 +257,7 @@ class Address extends \Google\Protobuf\Internal\Message
     /**
      *街道
      *
-     * Generated from protobuf field <code>string SubDistrict = 7;</code>
+     * Generated from protobuf field <code>string SubDistrict = 8;</code>
      * @param string $var
      * @return $this
      */
@@ -238,7 +270,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Zip = 8;</code>
+     * Generated from protobuf field <code>string Zip = 9;</code>
      * @return string
      */
     public function getZip()
@@ -247,7 +279,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Zip = 8;</code>
+     * Generated from protobuf field <code>string Zip = 9;</code>
      * @param string $var
      * @return $this
      */
@@ -260,7 +292,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address1 = 9;</code>
+     * Generated from protobuf field <code>string Address1 = 10;</code>
      * @return string
      */
     public function getAddress1()
@@ -269,7 +301,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address1 = 9;</code>
+     * Generated from protobuf field <code>string Address1 = 10;</code>
      * @param string $var
      * @return $this
      */
@@ -282,7 +314,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address2 = 10;</code>
+     * Generated from protobuf field <code>string Address2 = 11;</code>
      * @return string
      */
     public function getAddress2()
@@ -291,7 +323,7 @@ class Address extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Address2 = 10;</code>
+     * Generated from protobuf field <code>string Address2 = 11;</code>
      * @param string $var
      * @return $this
      */
@@ -299,6 +331,32 @@ class Address extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->Address2 = $var;
+
+        return $this;
+    }
+
+    /**
+     *扩展字段	
+     *
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 20;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getMeta()
+    {
+        return $this->Meta;
+    }
+
+    /**
+     *扩展字段	
+     *
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 20;</code>
+     * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setMeta($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Meta::class);
+        $this->Meta = $arr;
 
         return $this;
     }
