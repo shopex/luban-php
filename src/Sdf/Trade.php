@@ -106,9 +106,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *收货地址
      *
-     * Generated from protobuf field <code>.luban.Address BuyerAddress = 16;</code>
+     * Generated from protobuf field <code>.luban.Address ShippingAddress = 16;</code>
      */
-    private $BuyerAddress = null;
+    private $ShippingAddress = null;
     /**
      *促销token
      *
@@ -574,25 +574,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *收货地址
      *
-     * Generated from protobuf field <code>.luban.Address BuyerAddress = 16;</code>
+     * Generated from protobuf field <code>.luban.Address ShippingAddress = 16;</code>
      * @return \Shopex\Luban\Sdf\Address
      */
-    public function getBuyerAddress()
+    public function getShippingAddress()
     {
-        return $this->BuyerAddress;
+        return $this->ShippingAddress;
     }
 
     /**
      *收货地址
      *
-     * Generated from protobuf field <code>.luban.Address BuyerAddress = 16;</code>
+     * Generated from protobuf field <code>.luban.Address ShippingAddress = 16;</code>
      * @param \Shopex\Luban\Sdf\Address $var
      * @return $this
      */
-    public function setBuyerAddress($var)
+    public function setShippingAddress($var)
     {
         GPBUtil::checkMessage($var, \Shopex\Luban\Sdf\Address::class);
-        $this->BuyerAddress = $var;
+        $this->ShippingAddress = $var;
 
         return $this;
     }

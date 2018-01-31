@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class TradePayRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string TradeBn = 1;</code>
+     * Generated from protobuf field <code>string Tid = 1;</code>
      */
-    private $TradeBn = '';
+    private $Tid = '';
     /**
      * Generated from protobuf field <code>.luban.PayStatus PayStatus = 2;</code>
      */
@@ -32,23 +32,23 @@ class TradePayRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string TradeBn = 1;</code>
+     * Generated from protobuf field <code>string Tid = 1;</code>
      * @return string
      */
-    public function getTradeBn()
+    public function getTid()
     {
-        return $this->TradeBn;
+        return $this->Tid;
     }
 
     /**
-     * Generated from protobuf field <code>string TradeBn = 1;</code>
+     * Generated from protobuf field <code>string Tid = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setTradeBn($var)
+    public function setTid($var)
     {
         GPBUtil::checkString($var, True);
-        $this->TradeBn = $var;
+        $this->Tid = $var;
 
         return $this;
     }
