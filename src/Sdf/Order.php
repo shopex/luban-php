@@ -32,6 +32,8 @@ class Order extends \Google\Protobuf\Internal\Message
      */
     private $SkuName = '';
     /**
+     *订单类型
+     *
      * Generated from protobuf field <code>.luban.OrderType Type = 5;</code>
      */
     private $Type = 0;
@@ -154,6 +156,8 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *订单类型
+     *
      * Generated from protobuf field <code>.luban.OrderType Type = 5;</code>
      * @return int
      */
@@ -163,6 +167,8 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *订单类型
+     *
      * Generated from protobuf field <code>.luban.OrderType Type = 5;</code>
      * @param int $var
      * @return $this
