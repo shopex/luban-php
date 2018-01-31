@@ -26,7 +26,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
      */
     private $TrackNumber = '';
     /**
-     *创建时间	
+     *创建时间
      *
      * Generated from protobuf field <code>int64 CreateTime = 7;</code>
      */
@@ -112,7 +112,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *创建时间	
+     *创建时间
      *
      * Generated from protobuf field <code>int64 CreateTime = 7;</code>
      * @return int|string
@@ -123,7 +123,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *创建时间	
+     *创建时间
      *
      * Generated from protobuf field <code>int64 CreateTime = 7;</code>
      * @param int|string $var

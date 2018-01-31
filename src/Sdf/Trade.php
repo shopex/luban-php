@@ -170,9 +170,13 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $Shipments;
     /**
-     *扩展字段
+     * Generated from protobuf field <code>repeated .luban.Event Evnets = 35;</code>
+     */
+    private $Evnets;
+    /**
+     *扩展字段	
      *
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 35;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      */
     private $Meta;
 
@@ -858,9 +862,31 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *扩展字段
+     * Generated from protobuf field <code>repeated .luban.Event Evnets = 35;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getEvnets()
+    {
+        return $this->Evnets;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .luban.Event Evnets = 35;</code>
+     * @param \Shopex\Luban\Sdf\Event[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setEvnets($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Event::class);
+        $this->Evnets = $arr;
+
+        return $this;
+    }
+
+    /**
+     *扩展字段	
      *
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 35;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMeta()
@@ -869,9 +895,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *扩展字段
+     *扩展字段	
      *
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 35;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
