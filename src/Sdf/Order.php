@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class Order extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>string Id = 1;</code>
+     * Generated from protobuf field <code>int64 Id = 1;</code>
      */
-    private $Id = '';
+    private $Id = 0;
     /**
      *交易单号
      *
@@ -86,8 +86,8 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Id = 1;</code>
-     * @return string
+     * Generated from protobuf field <code>int64 Id = 1;</code>
+     * @return int|string
      */
     public function getId()
     {
@@ -95,13 +95,13 @@ class Order extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string Id = 1;</code>
-     * @param string $var
+     * Generated from protobuf field <code>int64 Id = 1;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setId($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt64($var);
         $this->Id = $var;
 
         return $this;
