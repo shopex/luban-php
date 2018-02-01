@@ -17,6 +17,12 @@ class TradePayResponse extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string Tid = 1;</code>
      */
     private $Tid = '';
+    /**
+     *支付状态
+     *
+     * Generated from protobuf field <code>.luban.PayStatus PayStatus = 2;</code>
+     */
+    private $PayStatus = 0;
 
     public function __construct() {
         \GPBMetadata\SvcDealer::initOnce();
@@ -41,6 +47,32 @@ class TradePayResponse extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->Tid = $var;
+
+        return $this;
+    }
+
+    /**
+     *支付状态
+     *
+     * Generated from protobuf field <code>.luban.PayStatus PayStatus = 2;</code>
+     * @return int
+     */
+    public function getPayStatus()
+    {
+        return $this->PayStatus;
+    }
+
+    /**
+     *支付状态
+     *
+     * Generated from protobuf field <code>.luban.PayStatus PayStatus = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setPayStatus($var)
+    {
+        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\PayStatus::class);
+        $this->PayStatus = $var;
 
         return $this;
     }
