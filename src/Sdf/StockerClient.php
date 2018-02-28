@@ -43,6 +43,19 @@ class StockerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Shopex\Luban\Sdf\StockBatchGetRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function BatchGet(\Shopex\Luban\Sdf\StockBatchGetRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Stocker/BatchGet',
+        $argument,
+        ['\Shopex\Luban\Sdf\StockBatchGetResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Shopex\Luban\Sdf\StockSetRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
