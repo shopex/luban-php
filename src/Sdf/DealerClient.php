@@ -81,4 +81,30 @@ class DealerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Shopex\Luban\Sdf\TradeAfterSaleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeAfterSale(\Shopex\Luban\Sdf\TradeAfterSaleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeAfterSale',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeCancelResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Shopex\Luban\Sdf\TradeShipRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeShip(\Shopex\Luban\Sdf\TradeShipRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeShip',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeCancelResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
