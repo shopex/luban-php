@@ -27,5 +27,11 @@ class TradeStatus
      * Generated from protobuf enum <code>TRADE_CLOSED = 2;</code>
      */
     const TRADE_CLOSED = 2;
+    /**
+     *交易售后中
+     *
+     * Generated from protobuf enum <code>TRADE_AFTERSALE = 3;</code>
+     */
+    const TRADE_AFTERSALE = 3;
 }
 
