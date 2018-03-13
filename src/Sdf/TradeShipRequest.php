@@ -21,6 +21,14 @@ class TradeShipRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string ShippingStatus = 2;</code>
      */
     private $ShippingStatus = '';
+    /**
+     * Generated from protobuf field <code>string Carrier = 3;</code>
+     */
+    private $Carrier = '';
+    /**
+     * Generated from protobuf field <code>string TrackNumber = 4;</code>
+     */
+    private $TrackNumber = '';
 
     public function __construct() {
         \GPBMetadata\SvcDealer::initOnce();
@@ -67,6 +75,50 @@ class TradeShipRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ShippingStatus = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string Carrier = 3;</code>
+     * @return string
+     */
+    public function getCarrier()
+    {
+        return $this->Carrier;
+    }
+
+    /**
+     * Generated from protobuf field <code>string Carrier = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCarrier($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->Carrier = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string TrackNumber = 4;</code>
+     * @return string
+     */
+    public function getTrackNumber()
+    {
+        return $this->TrackNumber;
+    }
+
+    /**
+     * Generated from protobuf field <code>string TrackNumber = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTrackNumber($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->TrackNumber = $var;
 
         return $this;
     }
