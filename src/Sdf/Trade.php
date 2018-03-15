@@ -46,9 +46,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShipStatus = 6;</code>
      */
-    private $ShippingStatus = 0;
+    private $ShipStatus = 0;
     /**
      *子订单
      *
@@ -318,25 +318,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShipStatus = 6;</code>
      * @return int
      */
-    public function getShippingStatus()
+    public function getShipStatus()
     {
-        return $this->ShippingStatus;
+        return $this->ShipStatus;
     }
 
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShipStatus = 6;</code>
      * @param int $var
      * @return $this
      */
-    public function setShippingStatus($var)
+    public function setShipStatus($var)
     {
         GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\ShippingStatus::class);
-        $this->ShippingStatus = $var;
+        $this->ShipStatus = $var;
 
         return $this;
     }

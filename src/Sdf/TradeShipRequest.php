@@ -18,9 +18,9 @@ class TradeShipRequest extends \Google\Protobuf\Internal\Message
      */
     private $Tid = '';
     /**
-     * Generated from protobuf field <code>string ShippingStatus = 2;</code>
+     * Generated from protobuf field <code>string ShipStatus = 2;</code>
      */
-    private $ShippingStatus = '';
+    private $ShipStatus = '';
     /**
      * Generated from protobuf field <code>string Carrier = 3;</code>
      */
@@ -58,23 +58,23 @@ class TradeShipRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string ShippingStatus = 2;</code>
+     * Generated from protobuf field <code>string ShipStatus = 2;</code>
      * @return string
      */
-    public function getShippingStatus()
+    public function getShipStatus()
     {
-        return $this->ShippingStatus;
+        return $this->ShipStatus;
     }
 
     /**
-     * Generated from protobuf field <code>string ShippingStatus = 2;</code>
+     * Generated from protobuf field <code>string ShipStatus = 2;</code>
      * @param string $var
      * @return $this
      */
-    public function setShippingStatus($var)
+    public function setShipStatus($var)
     {
         GPBUtil::checkString($var, True);
-        $this->ShippingStatus = $var;
+        $this->ShipStatus = $var;
 
         return $this;
     }
