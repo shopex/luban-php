@@ -33,6 +33,10 @@ class SearchRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string OrderBy = 5;</code>
      */
     private $OrderBy = '';
+    /**
+     * Generated from protobuf field <code>bool IsCount = 6;</code>
+     */
+    private $IsCount = false;
 
     public function __construct() {
         \GPBMetadata\Support::initOnce();
@@ -145,6 +149,28 @@ class SearchRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->OrderBy = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool IsCount = 6;</code>
+     * @return bool
+     */
+    public function getIsCount()
+    {
+        return $this->IsCount;
+    }
+
+    /**
+     * Generated from protobuf field <code>bool IsCount = 6;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setIsCount($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->IsCount = $var;
 
         return $this;
     }

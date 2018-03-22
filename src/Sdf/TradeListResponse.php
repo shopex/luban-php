@@ -14,9 +14,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class TradeListResponse extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>repeated .luban.Trade Trade = 1;</code>
+     * Generated from protobuf field <code>repeated .luban.Trade Data = 1;</code>
      */
-    private $Trade;
+    private $Data;
     /**
      * Generated from protobuf field <code>int64 Count = 2;</code>
      */
@@ -28,23 +28,23 @@ class TradeListResponse extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Trade Trade = 1;</code>
+     * Generated from protobuf field <code>repeated .luban.Trade Data = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
-    public function getTrade()
+    public function getData()
     {
-        return $this->Trade;
+        return $this->Data;
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Trade Trade = 1;</code>
+     * Generated from protobuf field <code>repeated .luban.Trade Data = 1;</code>
      * @param \Shopex\Luban\Sdf\Trade[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
-    public function setTrade($var)
+    public function setData($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Trade::class);
-        $this->Trade = $arr;
+        $this->Data = $arr;
 
         return $this;
     }
