@@ -26,9 +26,9 @@ class TradeAfterSaleRequest extends \Google\Protobuf\Internal\Message
      */
     private $Mobile = '';
     /**
-     * Generated from protobuf field <code>int64 Status = 4;</code>
+     * Generated from protobuf field <code>string Status = 4;</code>
      */
-    private $Status = 0;
+    private $Status = '';
 
     public function __construct() {
         \GPBMetadata\SvcDealer::initOnce();
@@ -102,8 +102,8 @@ class TradeAfterSaleRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 Status = 4;</code>
-     * @return int|string
+     * Generated from protobuf field <code>string Status = 4;</code>
+     * @return string
      */
     public function getStatus()
     {
@@ -111,13 +111,13 @@ class TradeAfterSaleRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int64 Status = 4;</code>
-     * @param int|string $var
+     * Generated from protobuf field <code>string Status = 4;</code>
+     * @param string $var
      * @return $this
      */
     public function setStatus($var)
     {
-        GPBUtil::checkInt64($var);
+        GPBUtil::checkString($var, True);
         $this->Status = $var;
 
         return $this;
