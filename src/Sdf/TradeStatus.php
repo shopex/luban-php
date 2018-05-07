@@ -33,5 +33,11 @@ class TradeStatus
      * Generated from protobuf enum <code>TRADE_AFTERSALE = 3;</code>
      */
     const TRADE_AFTERSALE = 3;
+    /**
+     *to be confirm 待确认，主要用在拼团，预售等场景
+     *
+     * Generated from protobuf enum <code>TRADE_TBC = 4;</code>
+     */
+    const TRADE_TBC = 4;
 }
 
