@@ -95,6 +95,19 @@ class DealerClient extends \Grpc\BaseStub {
     }
 
     /**
+     * @param \Shopex\Luban\Sdf\TradeUpdateRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeStatusConfirm(\Shopex\Luban\Sdf\TradeUpdateRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeStatusConfirm',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeUpdateResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
      * @param \Shopex\Luban\Sdf\TradeAfterSaleRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
