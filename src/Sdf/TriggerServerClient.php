@@ -5,7 +5,7 @@ namespace Shopex\Luban\Sdf;
 
 /**
  */
-class TriggerSvcClient extends \Grpc\BaseStub {
+class TriggerServerClient extends \Grpc\BaseStub {
 
     /**
      * @param string $hostname hostname
@@ -23,7 +23,7 @@ class TriggerSvcClient extends \Grpc\BaseStub {
      */
     public function Create(\Shopex\Luban\Sdf\Trigger $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/luban.TriggerSvc/Create',
+        return $this->_simpleRequest('/luban.TriggerServer/Create',
         $argument,
         ['\Shopex\Luban\Sdf\TriggerCreateResponse', 'decode'],
         $metadata, $options);
@@ -36,7 +36,7 @@ class TriggerSvcClient extends \Grpc\BaseStub {
      */
     public function Update(\Shopex\Luban\Sdf\TriggerUpdateRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/luban.TriggerSvc/Update',
+        return $this->_simpleRequest('/luban.TriggerServer/Update',
         $argument,
         ['\Shopex\Luban\Sdf\TriggerUpdateResponse', 'decode'],
         $metadata, $options);
@@ -49,7 +49,7 @@ class TriggerSvcClient extends \Grpc\BaseStub {
      */
     public function TriggerInfo(\Shopex\Luban\Sdf\TriggerInfoRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/luban.TriggerSvc/TriggerInfo',
+        return $this->_simpleRequest('/luban.TriggerServer/TriggerInfo',
         $argument,
         ['\Shopex\Luban\Sdf\Trigger', 'decode'],
         $metadata, $options);
@@ -62,7 +62,7 @@ class TriggerSvcClient extends \Grpc\BaseStub {
      */
     public function TriggerList(\Shopex\Luban\Sdf\SearchRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/luban.TriggerSvc/TriggerList',
+        return $this->_simpleRequest('/luban.TriggerServer/TriggerList',
         $argument,
         ['\Shopex\Luban\Sdf\TriggerListResponse', 'decode'],
         $metadata, $options);
