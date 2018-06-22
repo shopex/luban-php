@@ -46,9 +46,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShippingStatus ShipStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
      */
-    private $ShipStatus = 0;
+    private $ShippingStatus = 0;
     /**
      *子订单
      *
@@ -174,7 +174,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $Evnets;
     /**
-     *扩展字段	
+     *扩展字段  
      *
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      */
@@ -318,25 +318,25 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShippingStatus ShipStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
      * @return int
      */
-    public function getShipStatus()
+    public function getShippingStatus()
     {
-        return $this->ShipStatus;
+        return $this->ShippingStatus;
     }
 
     /**
      *配送状态
      *
-     * Generated from protobuf field <code>.luban.ShippingStatus ShipStatus = 6;</code>
+     * Generated from protobuf field <code>.luban.ShippingStatus ShippingStatus = 6;</code>
      * @param int $var
      * @return $this
      */
-    public function setShipStatus($var)
+    public function setShippingStatus($var)
     {
         GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\ShippingStatus::class);
-        $this->ShipStatus = $var;
+        $this->ShippingStatus = $var;
 
         return $this;
     }
@@ -884,7 +884,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *扩展字段	
+     *扩展字段  
      *
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -895,7 +895,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *扩展字段	
+     *扩展字段  
      *
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var

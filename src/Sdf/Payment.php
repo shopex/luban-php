@@ -40,9 +40,9 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      * 货币金额
      *
-     * Generated from protobuf field <code>double CurrencyAmount = 5;</code>
+     * Generated from protobuf field <code>string CurrencyAmount = 5;</code>
      */
-    private $CurrencyAmount = 0.0;
+    private $CurrencyAmount = '';
     /**
      * alipay-h5  alipay-app 具体支付方法
      *
@@ -214,8 +214,8 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      * 货币金额
      *
-     * Generated from protobuf field <code>double CurrencyAmount = 5;</code>
-     * @return float
+     * Generated from protobuf field <code>string CurrencyAmount = 5;</code>
+     * @return string
      */
     public function getCurrencyAmount()
     {
@@ -225,13 +225,13 @@ class Payment extends \Google\Protobuf\Internal\Message
     /**
      * 货币金额
      *
-     * Generated from protobuf field <code>double CurrencyAmount = 5;</code>
-     * @param float $var
+     * Generated from protobuf field <code>string CurrencyAmount = 5;</code>
+     * @param string $var
      * @return $this
      */
     public function setCurrencyAmount($var)
     {
-        GPBUtil::checkDouble($var);
+        GPBUtil::checkString($var, True);
         $this->CurrencyAmount = $var;
 
         return $this;

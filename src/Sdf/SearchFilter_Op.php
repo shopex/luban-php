@@ -105,11 +105,5 @@ class SearchFilter_Op
      * Generated from protobuf enum <code>ISNOTNULL = 17;</code>
      */
     const ISNOTNULL = 17;
-    /**
-     *not between
-     *
-     * Generated from protobuf enum <code>NOTBETWEEN = 18;</code>
-     */
-    const NOTBETWEEN = 18;
 }
 

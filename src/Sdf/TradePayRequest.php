@@ -18,9 +18,13 @@ class TradePayRequest extends \Google\Protobuf\Internal\Message
      */
     private $Tid = '';
     /**
-     * Generated from protobuf field <code>repeated .luban.Payment Payments = 2;</code>
+     * Generated from protobuf field <code>.luban.PayStatus PayStatus = 2;</code>
      */
-    private $Payments;
+    private $PayStatus = 0;
+    /**
+     * Generated from protobuf field <code>double Amount = 3;</code>
+     */
+    private $Amount = 0.0;
 
     public function __construct() {
         \GPBMetadata\SvcDealer::initOnce();
@@ -50,23 +54,45 @@ class TradePayRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Payment Payments = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * Generated from protobuf field <code>.luban.PayStatus PayStatus = 2;</code>
+     * @return int
      */
-    public function getPayments()
+    public function getPayStatus()
     {
-        return $this->Payments;
+        return $this->PayStatus;
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Payment Payments = 2;</code>
-     * @param \Shopex\Luban\Sdf\Payment[]|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>.luban.PayStatus PayStatus = 2;</code>
+     * @param int $var
      * @return $this
      */
-    public function setPayments($var)
+    public function setPayStatus($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Payment::class);
-        $this->Payments = $arr;
+        GPBUtil::checkEnum($var, \Shopex\Luban\Sdf\PayStatus::class);
+        $this->PayStatus = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>double Amount = 3;</code>
+     * @return float
+     */
+    public function getAmount()
+    {
+        return $this->Amount;
+    }
+
+    /**
+     * Generated from protobuf field <code>double Amount = 3;</code>
+     * @param float $var
+     * @return $this
+     */
+    public function setAmount($var)
+    {
+        GPBUtil::checkDouble($var);
+        $this->Amount = $var;
 
         return $this;
     }

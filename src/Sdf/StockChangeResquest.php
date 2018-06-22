@@ -21,10 +21,6 @@ class StockChangeResquest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .luban.StockDiff Items = 2;</code>
      */
     private $Items;
-    /**
-     * Generated from protobuf field <code>string ChangeType = 3;</code>
-     */
-    private $ChangeType = '';
 
     public function __construct() {
         \GPBMetadata\SvcStocker::initOnce();
@@ -71,28 +67,6 @@ class StockChangeResquest extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\StockDiff::class);
         $this->Items = $arr;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string ChangeType = 3;</code>
-     * @return string
-     */
-    public function getChangeType()
-    {
-        return $this->ChangeType;
-    }
-
-    /**
-     * Generated from protobuf field <code>string ChangeType = 3;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setChangeType($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->ChangeType = $var;
 
         return $this;
     }

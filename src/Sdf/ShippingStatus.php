@@ -10,28 +10,58 @@ namespace Shopex\Luban\Sdf;
 class ShippingStatus
 {
     /**
-     * 未处理
+     *未开始处理
      *
-     * Generated from protobuf enum <code>SHIP_UNPROCESS = 0;</code>
+     * Generated from protobuf enum <code>NEW = 0;</code>
      */
-    const SHIP_UNPROCESS = 0;
+    const PBNEW = 0;
     /**
-     * 配货中
+     *仓库接单 
      *
-     * Generated from protobuf enum <code>SHIP_ALLOCATION = 1;</code>
+     * Generated from protobuf enum <code>ACCEPT = 1;</code>
      */
-    const SHIP_ALLOCATION = 1;
+    const ACCEPT = 1;
     /**
-     * 已发货
+     *部分发货完成
      *
-     * Generated from protobuf enum <code>SHIP_ALL_SHIPPED = 2;</code>
+     * Generated from protobuf enum <code>PARTDELIVERED = 2;</code>
      */
-    const SHIP_ALL_SHIPPED = 2;
+    const PARTDELIVERED = 2;
     /**
-     * 部分发货
+     *发货完成
      *
-     * Generated from protobuf enum <code>SHIP_PART_SHIPPED = 3;</code>
+     * Generated from protobuf enum <code>DELIVERED = 3;</code>
      */
-    const SHIP_PART_SHIPPED = 3;
+    const DELIVERED = 3;
+    /**
+     *异常
+     *
+     * Generated from protobuf enum <code>EXCEPTION = 4;</code>
+     */
+    const EXCEPTION = 4;
+    /**
+     *取消
+     *
+     * Generated from protobuf enum <code>CANCELED = 5;</code>
+     */
+    const CANCELED = 5;
+    /**
+     *关闭
+     *
+     * Generated from protobuf enum <code>CLOSED = 6;</code>
+     */
+    const CLOSED = 6;
+    /**
+     *拒单
+     *
+     * Generated from protobuf enum <code>REJECT = 7;</code>
+     */
+    const REJECT = 7;
+    /**
+     *取消失败
+     *
+     * Generated from protobuf enum <code>CANCELEDFAIL = 8;</code>
+     */
+    const CANCELEDFAIL = 8;
 }
 
