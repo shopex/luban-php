@@ -18,21 +18,17 @@ class Shipment extends \Google\Protobuf\Internal\Message
      */
     private $Tid = '';
     /**
-     * Generated from protobuf field <code>string LogisticsCode = 2;</code>
+     * Generated from protobuf field <code>string Carrier = 2;</code>
      */
-    private $LogisticsCode = '';
+    private $Carrier = '';
     /**
-     * Generated from protobuf field <code>string LogisticsName = 3;</code>
-     */
-    private $LogisticsName = '';
-    /**
-     * Generated from protobuf field <code>string TrackNumber = 4;</code>
+     * Generated from protobuf field <code>string TrackNumber = 3;</code>
      */
     private $TrackNumber = '';
     /**
      *创建时间
      *
-     * Generated from protobuf field <code>int64 CreateTime = 5;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 7;</code>
      */
     private $CreateTime = 0;
     /**
@@ -72,51 +68,29 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string LogisticsCode = 2;</code>
+     * Generated from protobuf field <code>string Carrier = 2;</code>
      * @return string
      */
-    public function getLogisticsCode()
+    public function getCarrier()
     {
-        return $this->LogisticsCode;
+        return $this->Carrier;
     }
 
     /**
-     * Generated from protobuf field <code>string LogisticsCode = 2;</code>
+     * Generated from protobuf field <code>string Carrier = 2;</code>
      * @param string $var
      * @return $this
      */
-    public function setLogisticsCode($var)
+    public function setCarrier($var)
     {
         GPBUtil::checkString($var, True);
-        $this->LogisticsCode = $var;
+        $this->Carrier = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>string LogisticsName = 3;</code>
-     * @return string
-     */
-    public function getLogisticsName()
-    {
-        return $this->LogisticsName;
-    }
-
-    /**
-     * Generated from protobuf field <code>string LogisticsName = 3;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setLogisticsName($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->LogisticsName = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string TrackNumber = 4;</code>
+     * Generated from protobuf field <code>string TrackNumber = 3;</code>
      * @return string
      */
     public function getTrackNumber()
@@ -125,7 +99,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string TrackNumber = 4;</code>
+     * Generated from protobuf field <code>string TrackNumber = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -140,7 +114,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     /**
      *创建时间
      *
-     * Generated from protobuf field <code>int64 CreateTime = 5;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 7;</code>
      * @return int|string
      */
     public function getCreateTime()
@@ -151,7 +125,7 @@ class Shipment extends \Google\Protobuf\Internal\Message
     /**
      *创建时间
      *
-     * Generated from protobuf field <code>int64 CreateTime = 5;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 7;</code>
      * @param int|string $var
      * @return $this
      */

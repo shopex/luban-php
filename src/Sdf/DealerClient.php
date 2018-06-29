@@ -68,4 +68,69 @@ class DealerClient extends \Grpc\BaseStub {
         $metadata, $options);
     }
 
+    /**
+     * @param \Shopex\Luban\Sdf\TradeCancelRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeCancel(\Shopex\Luban\Sdf\TradeCancelRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeCancel',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeCancelResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Shopex\Luban\Sdf\TradeConfirmRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeConfirm(\Shopex\Luban\Sdf\TradeConfirmRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeConfirm',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeCancelResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Shopex\Luban\Sdf\TradeUpdateRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeStatusConfirm(\Shopex\Luban\Sdf\TradeUpdateRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeStatusConfirm',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeUpdateResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Shopex\Luban\Sdf\TradeAfterSaleRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeAfterSale(\Shopex\Luban\Sdf\TradeAfterSaleRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeAfterSale',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeCancelResponse', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Shopex\Luban\Sdf\TradeShipRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     */
+    public function TradeShip(\Shopex\Luban\Sdf\TradeShipRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/luban.Dealer/TradeShip',
+        $argument,
+        ['\Shopex\Luban\Sdf\TradeCancelResponse', 'decode'],
+        $metadata, $options);
+    }
+
 }
