@@ -56,123 +56,111 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $Orders;
     /**
+     *赠品券
+     *
+     * Generated from protobuf field <code>repeated .luban.Gift Gifts = 8;</code>
+     */
+    private $Gifts;
+    /**
      *货币类型  // https://www.currency-iso.org/en/home/tables/table-a1.html
      *
-     * Generated from protobuf field <code>string Currency = 8;</code>
+     * Generated from protobuf field <code>string Currency = 9;</code>
      */
     private $Currency = '';
     /**
      *商品总额  // Order1.Amount + Order2.Amount ...
      *
-     * Generated from protobuf field <code>double GoodsAmount = 9;</code>
+     * Generated from protobuf field <code>double GoodsAmount = 10;</code>
      */
     private $GoodsAmount = 0.0;
     /**
      *支付总额 
      *
-     * Generated from protobuf field <code>double PaidAmount = 10;</code>
+     * Generated from protobuf field <code>double PaidAmount = 11;</code>
      */
     private $PaidAmount = 0.0;
     /**
      *最终交易金额 FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
      *
-     * Generated from protobuf field <code>double FinalAmount = 11;</code>
+     * Generated from protobuf field <code>double FinalAmount = 12;</code>
      */
     private $FinalAmount = 0.0;
     /**
      *税费
      *
-     * Generated from protobuf field <code>double TaxFee = 12;</code>
+     * Generated from protobuf field <code>double TaxFee = 13;</code>
      */
     private $TaxFee = 0.0;
     /**
      *物流费用
      *
-     * Generated from protobuf field <code>double ShippingFee = 13;</code>
+     * Generated from protobuf field <code>double ShippingFee = 14;</code>
      */
     private $ShippingFee = 0.0;
     /**
      *优惠费用
      *
-     * Generated from protobuf field <code>double DiscountFee = 14;</code>
+     * Generated from protobuf field <code>double DiscountFee = 15;</code>
      */
     private $DiscountFee = 0.0;
     /**
      *价格调整，+为增， -为减免
      *
-     * Generated from protobuf field <code>double AdjustPrice = 15;</code>
+     * Generated from protobuf field <code>double AdjustPrice = 16;</code>
      */
     private $AdjustPrice = 0.0;
     /**
      *收货地址
      *
-     * Generated from protobuf field <code>.luban.Address ShippingAddress = 16;</code>
+     * Generated from protobuf field <code>.luban.Address ShippingAddress = 17;</code>
      */
     private $ShippingAddress = null;
     /**
      *促销token
      *
-     * Generated from protobuf field <code>string DiscountToken = 17;</code>
+     * Generated from protobuf field <code>string DiscountToken = 18;</code>
      */
     private $DiscountToken = '';
     /**
      *促销明细
      *
-     * Generated from protobuf field <code>string DiscountMemo = 18;</code>
+     * Generated from protobuf field <code>string DiscountMemo = 19;</code>
      */
     private $DiscountMemo = '';
     /**
-     *优惠券名称
-     *
-     * Generated from protobuf field <code>string PromotionName = 19;</code>
-     */
-    private $PromotionName = '';
-    /**
-     *优惠券token
-     *
-     * Generated from protobuf field <code>string PromotionToken = 20;</code>
-     */
-    private $PromotionToken = '';
-    /**
-     *优惠券明细
-     *
-     * Generated from protobuf field <code>string PromotionMemo = 21;</code>
-     */
-    private $PromotionMemo = '';
-    /**
      *发票
      *
-     * Generated from protobuf field <code>.luban.Invoice Invoice = 22;</code>
+     * Generated from protobuf field <code>.luban.Invoice Invoice = 20;</code>
      */
     private $Invoice = null;
     /**
      *买家备注
      *
-     * Generated from protobuf field <code>string BuyerMemo = 23;</code>
+     * Generated from protobuf field <code>string BuyerMemo = 21;</code>
      */
     private $BuyerMemo = '';
     /**
      *交易备注
      *
-     * Generated from protobuf field <code>string TradeMemo = 24;</code>
+     * Generated from protobuf field <code>string TradeMemo = 22;</code>
      */
     private $TradeMemo = '';
     /**
      *创建时间 Status = TRADE_ACTIVE
      *
-     * Generated from protobuf field <code>int64 CreateTime = 25;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 23;</code>
      */
     private $CreateTime = 0;
     /**
      *最后更新时间
      *
-     * Generated from protobuf field <code>int64 ModifiedTime = 26;</code>
+     * Generated from protobuf field <code>int64 ModifiedTime = 24;</code>
      */
     private $ModifiedTime = 0;
     /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 27;</code>
+     * Generated from protobuf field <code>int64 EndTime = 25;</code>
      */
     private $EndTime = 0;
     /**
@@ -386,9 +374,35 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *赠品券
+     *
+     * Generated from protobuf field <code>repeated .luban.Gift Gifts = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getGifts()
+    {
+        return $this->Gifts;
+    }
+
+    /**
+     *赠品券
+     *
+     * Generated from protobuf field <code>repeated .luban.Gift Gifts = 8;</code>
+     * @param \Shopex\Luban\Sdf\Gift[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setGifts($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Gift::class);
+        $this->Gifts = $arr;
+
+        return $this;
+    }
+
+    /**
      *货币类型  // https://www.currency-iso.org/en/home/tables/table-a1.html
      *
-     * Generated from protobuf field <code>string Currency = 8;</code>
+     * Generated from protobuf field <code>string Currency = 9;</code>
      * @return string
      */
     public function getCurrency()
@@ -399,7 +413,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *货币类型  // https://www.currency-iso.org/en/home/tables/table-a1.html
      *
-     * Generated from protobuf field <code>string Currency = 8;</code>
+     * Generated from protobuf field <code>string Currency = 9;</code>
      * @param string $var
      * @return $this
      */
@@ -414,7 +428,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *商品总额  // Order1.Amount + Order2.Amount ...
      *
-     * Generated from protobuf field <code>double GoodsAmount = 9;</code>
+     * Generated from protobuf field <code>double GoodsAmount = 10;</code>
      * @return float
      */
     public function getGoodsAmount()
@@ -425,7 +439,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *商品总额  // Order1.Amount + Order2.Amount ...
      *
-     * Generated from protobuf field <code>double GoodsAmount = 9;</code>
+     * Generated from protobuf field <code>double GoodsAmount = 10;</code>
      * @param float $var
      * @return $this
      */
@@ -440,7 +454,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *支付总额 
      *
-     * Generated from protobuf field <code>double PaidAmount = 10;</code>
+     * Generated from protobuf field <code>double PaidAmount = 11;</code>
      * @return float
      */
     public function getPaidAmount()
@@ -451,7 +465,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *支付总额 
      *
-     * Generated from protobuf field <code>double PaidAmount = 10;</code>
+     * Generated from protobuf field <code>double PaidAmount = 11;</code>
      * @param float $var
      * @return $this
      */
@@ -466,7 +480,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *最终交易金额 FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
      *
-     * Generated from protobuf field <code>double FinalAmount = 11;</code>
+     * Generated from protobuf field <code>double FinalAmount = 12;</code>
      * @return float
      */
     public function getFinalAmount()
@@ -477,7 +491,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *最终交易金额 FinalAmount = ItemAmount + TaxFee + ShippingFee - DiscountFee + AdjustPrice
      *
-     * Generated from protobuf field <code>double FinalAmount = 11;</code>
+     * Generated from protobuf field <code>double FinalAmount = 12;</code>
      * @param float $var
      * @return $this
      */
@@ -492,7 +506,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *税费
      *
-     * Generated from protobuf field <code>double TaxFee = 12;</code>
+     * Generated from protobuf field <code>double TaxFee = 13;</code>
      * @return float
      */
     public function getTaxFee()
@@ -503,7 +517,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *税费
      *
-     * Generated from protobuf field <code>double TaxFee = 12;</code>
+     * Generated from protobuf field <code>double TaxFee = 13;</code>
      * @param float $var
      * @return $this
      */
@@ -518,7 +532,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *物流费用
      *
-     * Generated from protobuf field <code>double ShippingFee = 13;</code>
+     * Generated from protobuf field <code>double ShippingFee = 14;</code>
      * @return float
      */
     public function getShippingFee()
@@ -529,7 +543,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *物流费用
      *
-     * Generated from protobuf field <code>double ShippingFee = 13;</code>
+     * Generated from protobuf field <code>double ShippingFee = 14;</code>
      * @param float $var
      * @return $this
      */
@@ -544,7 +558,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *优惠费用
      *
-     * Generated from protobuf field <code>double DiscountFee = 14;</code>
+     * Generated from protobuf field <code>double DiscountFee = 15;</code>
      * @return float
      */
     public function getDiscountFee()
@@ -555,7 +569,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *优惠费用
      *
-     * Generated from protobuf field <code>double DiscountFee = 14;</code>
+     * Generated from protobuf field <code>double DiscountFee = 15;</code>
      * @param float $var
      * @return $this
      */
@@ -570,7 +584,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *价格调整，+为增， -为减免
      *
-     * Generated from protobuf field <code>double AdjustPrice = 15;</code>
+     * Generated from protobuf field <code>double AdjustPrice = 16;</code>
      * @return float
      */
     public function getAdjustPrice()
@@ -581,7 +595,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *价格调整，+为增， -为减免
      *
-     * Generated from protobuf field <code>double AdjustPrice = 15;</code>
+     * Generated from protobuf field <code>double AdjustPrice = 16;</code>
      * @param float $var
      * @return $this
      */
@@ -596,7 +610,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *收货地址
      *
-     * Generated from protobuf field <code>.luban.Address ShippingAddress = 16;</code>
+     * Generated from protobuf field <code>.luban.Address ShippingAddress = 17;</code>
      * @return \Shopex\Luban\Sdf\Address
      */
     public function getShippingAddress()
@@ -607,7 +621,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *收货地址
      *
-     * Generated from protobuf field <code>.luban.Address ShippingAddress = 16;</code>
+     * Generated from protobuf field <code>.luban.Address ShippingAddress = 17;</code>
      * @param \Shopex\Luban\Sdf\Address $var
      * @return $this
      */
@@ -622,7 +636,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *促销token
      *
-     * Generated from protobuf field <code>string DiscountToken = 17;</code>
+     * Generated from protobuf field <code>string DiscountToken = 18;</code>
      * @return string
      */
     public function getDiscountToken()
@@ -633,7 +647,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *促销token
      *
-     * Generated from protobuf field <code>string DiscountToken = 17;</code>
+     * Generated from protobuf field <code>string DiscountToken = 18;</code>
      * @param string $var
      * @return $this
      */
@@ -648,7 +662,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *促销明细
      *
-     * Generated from protobuf field <code>string DiscountMemo = 18;</code>
+     * Generated from protobuf field <code>string DiscountMemo = 19;</code>
      * @return string
      */
     public function getDiscountMemo()
@@ -659,7 +673,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *促销明细
      *
-     * Generated from protobuf field <code>string DiscountMemo = 18;</code>
+     * Generated from protobuf field <code>string DiscountMemo = 19;</code>
      * @param string $var
      * @return $this
      */
@@ -672,87 +686,9 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *优惠券名称
-     *
-     * Generated from protobuf field <code>string PromotionName = 19;</code>
-     * @return string
-     */
-    public function getPromotionName()
-    {
-        return $this->PromotionName;
-    }
-
-    /**
-     *优惠券名称
-     *
-     * Generated from protobuf field <code>string PromotionName = 19;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setPromotionName($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->PromotionName = $var;
-
-        return $this;
-    }
-
-    /**
-     *优惠券token
-     *
-     * Generated from protobuf field <code>string PromotionToken = 20;</code>
-     * @return string
-     */
-    public function getPromotionToken()
-    {
-        return $this->PromotionToken;
-    }
-
-    /**
-     *优惠券token
-     *
-     * Generated from protobuf field <code>string PromotionToken = 20;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setPromotionToken($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->PromotionToken = $var;
-
-        return $this;
-    }
-
-    /**
-     *优惠券明细
-     *
-     * Generated from protobuf field <code>string PromotionMemo = 21;</code>
-     * @return string
-     */
-    public function getPromotionMemo()
-    {
-        return $this->PromotionMemo;
-    }
-
-    /**
-     *优惠券明细
-     *
-     * Generated from protobuf field <code>string PromotionMemo = 21;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setPromotionMemo($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->PromotionMemo = $var;
-
-        return $this;
-    }
-
-    /**
      *发票
      *
-     * Generated from protobuf field <code>.luban.Invoice Invoice = 22;</code>
+     * Generated from protobuf field <code>.luban.Invoice Invoice = 20;</code>
      * @return \Shopex\Luban\Sdf\Invoice
      */
     public function getInvoice()
@@ -763,7 +699,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *发票
      *
-     * Generated from protobuf field <code>.luban.Invoice Invoice = 22;</code>
+     * Generated from protobuf field <code>.luban.Invoice Invoice = 20;</code>
      * @param \Shopex\Luban\Sdf\Invoice $var
      * @return $this
      */
@@ -778,7 +714,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *买家备注
      *
-     * Generated from protobuf field <code>string BuyerMemo = 23;</code>
+     * Generated from protobuf field <code>string BuyerMemo = 21;</code>
      * @return string
      */
     public function getBuyerMemo()
@@ -789,7 +725,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *买家备注
      *
-     * Generated from protobuf field <code>string BuyerMemo = 23;</code>
+     * Generated from protobuf field <code>string BuyerMemo = 21;</code>
      * @param string $var
      * @return $this
      */
@@ -804,7 +740,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *交易备注
      *
-     * Generated from protobuf field <code>string TradeMemo = 24;</code>
+     * Generated from protobuf field <code>string TradeMemo = 22;</code>
      * @return string
      */
     public function getTradeMemo()
@@ -815,7 +751,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *交易备注
      *
-     * Generated from protobuf field <code>string TradeMemo = 24;</code>
+     * Generated from protobuf field <code>string TradeMemo = 22;</code>
      * @param string $var
      * @return $this
      */
@@ -830,7 +766,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *创建时间 Status = TRADE_ACTIVE
      *
-     * Generated from protobuf field <code>int64 CreateTime = 25;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 23;</code>
      * @return int|string
      */
     public function getCreateTime()
@@ -841,7 +777,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *创建时间 Status = TRADE_ACTIVE
      *
-     * Generated from protobuf field <code>int64 CreateTime = 25;</code>
+     * Generated from protobuf field <code>int64 CreateTime = 23;</code>
      * @param int|string $var
      * @return $this
      */
@@ -856,7 +792,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *最后更新时间
      *
-     * Generated from protobuf field <code>int64 ModifiedTime = 26;</code>
+     * Generated from protobuf field <code>int64 ModifiedTime = 24;</code>
      * @return int|string
      */
     public function getModifiedTime()
@@ -867,7 +803,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *最后更新时间
      *
-     * Generated from protobuf field <code>int64 ModifiedTime = 26;</code>
+     * Generated from protobuf field <code>int64 ModifiedTime = 24;</code>
      * @param int|string $var
      * @return $this
      */
@@ -882,7 +818,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 27;</code>
+     * Generated from protobuf field <code>int64 EndTime = 25;</code>
      * @return int|string
      */
     public function getEndTime()
@@ -893,7 +829,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     /**
      *交易完成时间 Status = TRADE_FINISHED, TRADE_CLOSED
      *
-     * Generated from protobuf field <code>int64 EndTime = 27;</code>
+     * Generated from protobuf field <code>int64 EndTime = 25;</code>
      * @param int|string $var
      * @return $this
      */
