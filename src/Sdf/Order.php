@@ -85,6 +85,12 @@ class Order extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 13;</code>
      */
     private $Meta;
+    /**
+     *最大可退货数量
+     *
+     * Generated from protobuf field <code>int64 MaxNum = 14;</code>
+     */
+    private $MaxNum = 0;
 
     public function __construct() {
         \GPBMetadata\Trade::initOnce();
@@ -413,6 +419,32 @@ class Order extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Shopex\Luban\Sdf\Meta::class);
         $this->Meta = $arr;
+
+        return $this;
+    }
+
+    /**
+     *最大可退货数量
+     *
+     * Generated from protobuf field <code>int64 MaxNum = 14;</code>
+     * @return int|string
+     */
+    public function getMaxNum()
+    {
+        return $this->MaxNum;
+    }
+
+    /**
+     *最大可退货数量
+     *
+     * Generated from protobuf field <code>int64 MaxNum = 14;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setMaxNum($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->MaxNum = $var;
 
         return $this;
     }

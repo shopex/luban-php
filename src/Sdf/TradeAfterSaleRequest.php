@@ -29,6 +29,18 @@ class TradeAfterSaleRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string Status = 4;</code>
      */
     private $Status = '';
+    /**
+     * Generated from protobuf field <code>int64 ItemId = 5;</code>
+     */
+    private $ItemId = 0;
+    /**
+     * Generated from protobuf field <code>int64 SkuId = 6;</code>
+     */
+    private $SkuId = 0;
+    /**
+     * Generated from protobuf field <code>int64 Num = 7;</code>
+     */
+    private $Num = 0;
 
     public function __construct() {
         \GPBMetadata\SvcDealer::initOnce();
@@ -119,6 +131,72 @@ class TradeAfterSaleRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->Status = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 ItemId = 5;</code>
+     * @return int|string
+     */
+    public function getItemId()
+    {
+        return $this->ItemId;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 ItemId = 5;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setItemId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->ItemId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 SkuId = 6;</code>
+     * @return int|string
+     */
+    public function getSkuId()
+    {
+        return $this->SkuId;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 SkuId = 6;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setSkuId($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->SkuId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 Num = 7;</code>
+     * @return int|string
+     */
+    public function getNum()
+    {
+        return $this->Num;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 Num = 7;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setNum($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->Num = $var;
 
         return $this;
     }
