@@ -24,41 +24,35 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券类型 id
      *
-     * Generated from protobuf field <code>string CouponId = 2;</code>
+     * Generated from protobuf field <code>int64 CouponId = 2;</code>
      */
-    private $CouponId = '';
-    /**
-     *seckill 中的券 id
-     *
-     * Generated from protobuf field <code>int64 ItemId = 3;</code>
-     */
-    private $ItemId = 0;
+    private $CouponId = 0;
     /**
      *券名称
      *
-     * Generated from protobuf field <code>string Name = 4;</code>
+     * Generated from protobuf field <code>string GiftName = 3;</code>
      */
-    private $Name = '';
+    private $GiftName = '';
     /**
      *券图标
      *
-     * Generated from protobuf field <code>string Logo = 5;</code>
+     * Generated from protobuf field <code>string GiftLogo = 4;</code>
      */
-    private $Logo = '';
+    private $GiftLogo = '';
     /**
      *券代码
      *
-     * Generated from protobuf field <code>string Token = 6;</code>
+     * Generated from protobuf field <code>string GiftToken = 5;</code>
      */
-    private $Token = '';
+    private $GiftToken = '';
     /**
      *描述信息
      *
-     * Generated from protobuf field <code>string Memo = 7;</code>
+     * Generated from protobuf field <code>string GiftMemo = 6;</code>
      */
-    private $Memo = '';
+    private $GiftMemo = '';
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
      */
     private $Meta;
 
@@ -96,8 +90,8 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券类型 id
      *
-     * Generated from protobuf field <code>string CouponId = 2;</code>
-     * @return string
+     * Generated from protobuf field <code>int64 CouponId = 2;</code>
+     * @return int|string
      */
     public function getCouponId()
     {
@@ -107,66 +101,40 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券类型 id
      *
-     * Generated from protobuf field <code>string CouponId = 2;</code>
-     * @param string $var
+     * Generated from protobuf field <code>int64 CouponId = 2;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setCouponId($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt64($var);
         $this->CouponId = $var;
 
         return $this;
     }
 
     /**
-     *seckill 中的券 id
-     *
-     * Generated from protobuf field <code>int64 ItemId = 3;</code>
-     * @return int|string
-     */
-    public function getItemId()
-    {
-        return $this->ItemId;
-    }
-
-    /**
-     *seckill 中的券 id
-     *
-     * Generated from protobuf field <code>int64 ItemId = 3;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setItemId($var)
-    {
-        GPBUtil::checkInt64($var);
-        $this->ItemId = $var;
-
-        return $this;
-    }
-
-    /**
      *券名称
      *
-     * Generated from protobuf field <code>string Name = 4;</code>
+     * Generated from protobuf field <code>string GiftName = 3;</code>
      * @return string
      */
-    public function getName()
+    public function getGiftName()
     {
-        return $this->Name;
+        return $this->GiftName;
     }
 
     /**
      *券名称
      *
-     * Generated from protobuf field <code>string Name = 4;</code>
+     * Generated from protobuf field <code>string GiftName = 3;</code>
      * @param string $var
      * @return $this
      */
-    public function setName($var)
+    public function setGiftName($var)
     {
         GPBUtil::checkString($var, True);
-        $this->Name = $var;
+        $this->GiftName = $var;
 
         return $this;
     }
@@ -174,25 +142,25 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券图标
      *
-     * Generated from protobuf field <code>string Logo = 5;</code>
+     * Generated from protobuf field <code>string GiftLogo = 4;</code>
      * @return string
      */
-    public function getLogo()
+    public function getGiftLogo()
     {
-        return $this->Logo;
+        return $this->GiftLogo;
     }
 
     /**
      *券图标
      *
-     * Generated from protobuf field <code>string Logo = 5;</code>
+     * Generated from protobuf field <code>string GiftLogo = 4;</code>
      * @param string $var
      * @return $this
      */
-    public function setLogo($var)
+    public function setGiftLogo($var)
     {
         GPBUtil::checkString($var, True);
-        $this->Logo = $var;
+        $this->GiftLogo = $var;
 
         return $this;
     }
@@ -200,25 +168,25 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券代码
      *
-     * Generated from protobuf field <code>string Token = 6;</code>
+     * Generated from protobuf field <code>string GiftToken = 5;</code>
      * @return string
      */
-    public function getToken()
+    public function getGiftToken()
     {
-        return $this->Token;
+        return $this->GiftToken;
     }
 
     /**
      *券代码
      *
-     * Generated from protobuf field <code>string Token = 6;</code>
+     * Generated from protobuf field <code>string GiftToken = 5;</code>
      * @param string $var
      * @return $this
      */
-    public function setToken($var)
+    public function setGiftToken($var)
     {
         GPBUtil::checkString($var, True);
-        $this->Token = $var;
+        $this->GiftToken = $var;
 
         return $this;
     }
@@ -226,31 +194,31 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *描述信息
      *
-     * Generated from protobuf field <code>string Memo = 7;</code>
+     * Generated from protobuf field <code>string GiftMemo = 6;</code>
      * @return string
      */
-    public function getMemo()
+    public function getGiftMemo()
     {
-        return $this->Memo;
+        return $this->GiftMemo;
     }
 
     /**
      *描述信息
      *
-     * Generated from protobuf field <code>string Memo = 7;</code>
+     * Generated from protobuf field <code>string GiftMemo = 6;</code>
      * @param string $var
      * @return $this
      */
-    public function setMemo($var)
+    public function setGiftMemo($var)
     {
         GPBUtil::checkString($var, True);
-        $this->Memo = $var;
+        $this->GiftMemo = $var;
 
         return $this;
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMeta()
@@ -259,7 +227,7 @@ class Gift extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
