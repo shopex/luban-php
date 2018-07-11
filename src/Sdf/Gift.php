@@ -48,9 +48,9 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券 ID
      *
-     * Generated from protobuf field <code>string GiftID = 6;</code>
+     * Generated from protobuf field <code>int64 GiftID = 6;</code>
      */
-    private $GiftID = '';
+    private $GiftID = 0;
     /**
      *描述信息
      *
@@ -200,8 +200,8 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券 ID
      *
-     * Generated from protobuf field <code>string GiftID = 6;</code>
-     * @return string
+     * Generated from protobuf field <code>int64 GiftID = 6;</code>
+     * @return int|string
      */
     public function getGiftID()
     {
@@ -211,13 +211,13 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *券 ID
      *
-     * Generated from protobuf field <code>string GiftID = 6;</code>
-     * @param string $var
+     * Generated from protobuf field <code>int64 GiftID = 6;</code>
+     * @param int|string $var
      * @return $this
      */
     public function setGiftID($var)
     {
-        GPBUtil::checkString($var, True);
+        GPBUtil::checkInt64($var);
         $this->GiftID = $var;
 
         return $this;
