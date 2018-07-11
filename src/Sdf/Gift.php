@@ -46,13 +46,19 @@ class Gift extends \Google\Protobuf\Internal\Message
      */
     private $GiftToken = '';
     /**
+     *券 ID
+     *
+     * Generated from protobuf field <code>string GiftID = 6;</code>
+     */
+    private $GiftID = '';
+    /**
      *描述信息
      *
-     * Generated from protobuf field <code>string GiftMemo = 6;</code>
+     * Generated from protobuf field <code>string GiftMemo = 7;</code>
      */
     private $GiftMemo = '';
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
      */
     private $Meta;
 
@@ -192,9 +198,35 @@ class Gift extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *券 ID
+     *
+     * Generated from protobuf field <code>string GiftID = 6;</code>
+     * @return string
+     */
+    public function getGiftID()
+    {
+        return $this->GiftID;
+    }
+
+    /**
+     *券 ID
+     *
+     * Generated from protobuf field <code>string GiftID = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setGiftID($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->GiftID = $var;
+
+        return $this;
+    }
+
+    /**
      *描述信息
      *
-     * Generated from protobuf field <code>string GiftMemo = 6;</code>
+     * Generated from protobuf field <code>string GiftMemo = 7;</code>
      * @return string
      */
     public function getGiftMemo()
@@ -205,7 +237,7 @@ class Gift extends \Google\Protobuf\Internal\Message
     /**
      *描述信息
      *
-     * Generated from protobuf field <code>string GiftMemo = 6;</code>
+     * Generated from protobuf field <code>string GiftMemo = 7;</code>
      * @param string $var
      * @return $this
      */
@@ -218,7 +250,7 @@ class Gift extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMeta()
@@ -227,7 +259,7 @@ class Gift extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>repeated .luban.Meta Meta = 7;</code>
+     * Generated from protobuf field <code>repeated .luban.Meta Meta = 8;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
