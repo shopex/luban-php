@@ -20,7 +20,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     private $Mode = 0;
     /**
-     *发票类型	
+     *发票类型
      *
      * Generated from protobuf field <code>.luban.Invoice.EnumType Type = 2;</code>
      */
@@ -100,7 +100,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *发票类型	
+     *发票类型
      *
      * Generated from protobuf field <code>.luban.Invoice.EnumType Type = 2;</code>
      * @return int
@@ -111,7 +111,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *发票类型	
+     *发票类型
      *
      * Generated from protobuf field <code>.luban.Invoice.EnumType Type = 2;</code>
      * @param int $var

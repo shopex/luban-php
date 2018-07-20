@@ -74,7 +74,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $GoodsAmount = 0.0;
     /**
-     *支付总额 
+     *支付总额
      *
      * Generated from protobuf field <code>double PaidAmount = 11;</code>
      */
@@ -180,7 +180,7 @@ class Trade extends \Google\Protobuf\Internal\Message
      */
     private $Evnets;
     /**
-     *扩展字段	
+     *扩展字段
      *
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      */
@@ -452,7 +452,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付总额 
+     *支付总额
      *
      * Generated from protobuf field <code>double PaidAmount = 11;</code>
      * @return float
@@ -463,7 +463,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *支付总额 
+     *支付总额
      *
      * Generated from protobuf field <code>double PaidAmount = 11;</code>
      * @param float $var
@@ -916,7 +916,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *扩展字段	
+     *扩展字段
      *
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -927,7 +927,7 @@ class Trade extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *扩展字段	
+     *扩展字段
      *
      * Generated from protobuf field <code>repeated .luban.Meta Meta = 36;</code>
      * @param \Shopex\Luban\Sdf\Meta[]|\Google\Protobuf\Internal\RepeatedField $var

@@ -39,5 +39,11 @@ class TradeStatus
      * Generated from protobuf enum <code>TRADE_TBC = 4;</code>
      */
     const TRADE_TBC = 4;
+    /**
+     *退款中
+     *
+     * Generated from protobuf enum <code>TRADE_REFUND = 5;</code>
+     */
+    const TRADE_REFUND = 5;
 }
 
